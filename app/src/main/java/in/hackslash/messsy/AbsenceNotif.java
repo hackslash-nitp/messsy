@@ -1,4 +1,4 @@
-package com.example.messy;
+package in.hackslash.messsy;
 
 public class AbsenceNotif {
 }
