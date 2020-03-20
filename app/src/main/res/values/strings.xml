@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Messsy</string>
+    <string name="welcome_to_">Welcome to messsy!</string>
+    <string name="email">Email</string>
+    <string name="Password">password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="create_acco">Create Account</string>
 </resources>
