@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/undraw_cook"
+        android:layout_width="222.41dp"
+        android:layout_height="214.82dp"
+        android:layout_marginStart="55.07dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/welcome_to_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="332dp"
+        android:text="@string/welcome_to_"
+        android:textAppearance="@style/welcome_to_" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="380dp"
+        android:gravity="top"
+        android:text="@string/email"
+        android:textAppearance="@style/email" />
+
+    <EditText
+        android:id="@+id/line_1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="396dp"
+        android:backgroundTint="#39374D" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="451dp"
+        android:gravity="top"
+        android:text="@string/Password"
+        android:textAppearance="@style/password" />
+
+    <EditText
+        android:id="@+id/line_2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="469dp"
+        android:backgroundTint="#39374D" />
+
+    <Button
+        android:id="@+id/rectangle_1"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="554dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="6dp"
+        android:text="@string/sign_in"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="628dp"
+        android:text="@string/forgot_pass"
+        android:textColor="#39374D"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/create_acco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="628dp"
+        android:layout_marginEnd="54dp"
+        android:text="@string/create_acco"
+        android:textColor="#39374D"
+        android:textSize="12sp"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>
