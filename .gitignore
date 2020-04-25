@@ -1,0 +1,6 @@
+.idea/
+.gradle/
+.settings/
+.project
+local.properties
+Messsy.iml
