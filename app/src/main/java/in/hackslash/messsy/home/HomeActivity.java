@@ -1,11 +1,13 @@
-package in.hackslash.messsy;
+package in.hackslash.messsy.home;
 
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import in.hackslash.messsy.R;
+
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
