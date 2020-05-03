@@ -6,4 +6,10 @@
     <string name="sign_in">Sign in</string>
     <string name="forgot_pass">Forgot Password?</string>
     <string name="create_acco">Create Account</string>
+
+    <string name="complaint_s">Complaint Section</string>
+    <string name="issue">Issue</string>
+    <string name="description">Description</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="file_compla">File Complaint</string>
 </resources>
