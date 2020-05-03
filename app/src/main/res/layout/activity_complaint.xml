@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F7F7F7"
+    tools:context=".complaint.ComplaintActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -89,7 +90,7 @@
                 android:layout_below="@id/rectangle_4"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="24dp"
-                android:background="@drawable/rectangle_2"
+                android:background="@drawable/white_background"
                 android:elevation="12dp"
                 android:fontFamily="@font/josefin_sans_bold"
                 android:gravity="center"

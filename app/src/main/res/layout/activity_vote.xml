@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F7F7"
     tools:context=".vote.VoteActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="43dp">
+
+            <ImageView
+                android:id="@id/arrow_1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/arrow_1"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/vote_for_ch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/arrow_1"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="@string/vote_for_ch"
+                android:textAppearance="@style/vote_for_ch" />
+
+            <TextView
+                android:id="@+id/choose_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vote_for_ch"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/choose_meal"
+                android:textAppearance="@style/choose_meal" />
+
+            <RadioGroup
+                android:id="@+id/radio_buttom_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choose_meal"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="19dp">
+
+                <RadioButton
+                    android:id="@+id/breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="8dp"
+                    android:text="@string/breakfast"
+                    android:textAppearance="@style/breakfast" />
+
+                <RadioButton
+                    android:id="@+id/lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="8dp"
+                    android:text="@string/lunch"
+                    android:textAppearance="@style/lunch" />
+
+                <RadioButton
+                    android:id="@+id/dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="8dp"
+                    android:text="@string/dinner"
+                    android:textAppearance="@style/dinner" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/food_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radio_buttom_group"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/food_item"
+                android:textAppearance="@style/food_item" />
+
+            <EditText
+                android:id="@+id/enter_food_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/food_item"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#39374D"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+
+            <Button
+                android:id="@+id/vote_for_ad"
+                android:layout_width="130dp"
+                android:layout_height="37dp"
+                android:layout_below="@id/enter_food_item"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/white_background"
+                android:elevation="8dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/vote_for_adding"
+                android:textAppearance="@style/vote_for_ad" />
+
+            <Button
+                android:id="@+id/vote_for_re"
+                android:layout_width="130dp"
+                android:layout_height="37dp"
+                android:layout_below="@id/enter_food_item"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/white_background"
+                android:elevation="8dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/vote_for_re"
+                android:textAppearance="@style/vote_for_re" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vote_for_ad"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginEnd="35dp"
+                android:background="@drawable/rectangle_1"
+                android:elevation="8dp"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="@string/submit"
+                android:textAppearance="@style/submit" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
