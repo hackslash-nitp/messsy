@@ -1,9 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.EditProfileActivity">
+    tools:context=".onboarding.CreateAccountActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/edit_your_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:layout_alignStart="@id/line_1"
+            android:text="@string/edit_your_details"
+            android:textAppearance="@style/edit_your_details"
+            android:textSize="33sp"/>
+
+
+        <ImageView
+            android:id="@+id/breakfast_image"
+            android:layout_width="340dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/breakfast" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breakfast_image"
+            android:layout_marginTop="28dp"
+            android:layout_alignStart="@id/line_1"
+            android:layout_marginStart="3dp"
+            android:text="@string/name"
+            android:textAppearance="@style/name" />
+
+        <EditText
+            android:id="@+id/line_1"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_1"
+            android:layout_alignStart="@id/line_2"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/email_add"
+            android:textAppearance="@style/email_add" />
+
+        <EditText
+            android:id="@+id/line_2"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/room_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_2"
+            android:layout_alignStart="@id/line_3"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/room_no"
+            android:textAppearance="@style/room_no" />
+
+        <EditText
+            android:id="@+id/line_3"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_no"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/enter_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_3"
+            android:layout_alignStart="@id/line_4"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/enter_password"
+            android:textAppearance="@style/enter_password" />
+
+        <EditText
+            android:id="@+id/line_4"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enter_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/rectangle_1"
+            android:layout_width="290dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/line_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rectangle_1"
+            android:elevation="10dp"
+            android:text="@string/save_details"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+
+
+    </RelativeLayout>
+</ScrollView>
+
