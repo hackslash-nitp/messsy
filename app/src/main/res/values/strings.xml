@@ -6,4 +6,13 @@
     <string name="sign_in">Sign in</string>
     <string name="forgot_pass">Forgot Password?</string>
     <string name="create_acco">Create Account</string>
+    <string name="edit_your_details">Edit your details</string>
+    <string name="save_details">Save Details</string>
+    <string name="create_account">Create Account</string>
+    <string name="email_add">Email Address</string>
+    <string name="name">Name</string>
+    <string name="room_no">Room Number</string>
+    <string name="enter_password">Enter a password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
 </resources>
