@@ -1,113 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".complaint.ComplaintActivity">
-    <ScrollView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="UselessParent">
+        android:paddingBottom="43dp">
 
-        <RelativeLayout
+        <ImageView
+            android:id="@+id/arrow_1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/arrow_1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/complaint_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arrow_1"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/complaint_s"
+            android:textAppearance="@style/complaint_s" />
+
+        <TextView
+            android:id="@+id/issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_s"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/issue"
+            android:textAppearance="@style/issue" />
+
+        <EditText
+            android:id="@+id/line_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="43dp">
+            android:layout_below="@id/issue"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#39374D"
+            android:inputType="text"
+            android:textColor="#000000"
+            tools:ignore="Autofill,LabelFor" />
 
-            <ImageView
-                android:id="@+id/arrow_1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/arrow_1"
-                tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_1"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/description"
+            android:textAppearance="@style/description" />
 
-            <TextView
-                android:id="@+id/complaint_s"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/arrow_1"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/josefin_sans_bold"
-                android:text="@string/complaint_s"
-                android:textAppearance="@style/complaint_s" />
+        <ImageView
+            android:id="@+id/rectangle_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/description_box"
+            tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/issue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/complaint_s"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="52dp"
-                android:fontFamily="@font/josefin_sans_bold"
-                android:text="@string/issue"
-                android:textAppearance="@style/issue" />
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="135dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/rectangle_4"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/white_background"
+            android:elevation="12dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:gravity="center"
+            android:text="@string/upload_image"
+            android:textAppearance="@style/upload_image" />
 
-            <EditText
-                android:id="@+id/line_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/issue"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="#39374D"
-                android:inputType="text"
-                android:textColor="#000000"
-                tools:ignore="Autofill,LabelFor" />
-
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/line_1"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="28dp"
-                android:fontFamily="@font/josefin_sans_bold"
-                android:text="@string/description"
-                android:textAppearance="@style/description" />
-
-            <ImageView
-                android:id="@+id/rectangle_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/description"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="30dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/description_box"
-                tools:ignore="ContentDescription" />
-
-            <Button
-                android:id="@+id/upload_button"
-                android:layout_width="135dp"
-                android:layout_height="38dp"
-                android:layout_below="@id/rectangle_4"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/white_background"
-                android:elevation="12dp"
-                android:fontFamily="@font/josefin_sans_bold"
-                android:gravity="center"
-                android:text="@string/upload_image"
-                android:textAppearance="@style/upload_image" />
-
-            <Button
-                android:id="@+id/file_complaint_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/upload_button"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginEnd="35dp"
-                android:background="@drawable/rectangle_1"
-                android:elevation="80dp"
-                android:fontFamily="@font/josefin_sans_bold"
-                android:text="@string/file_compla"
-                android:textAppearance="@style/file_compla" />
-        </RelativeLayout>
-    </ScrollView>
-</RelativeLayout>
+        <Button
+            android:id="@+id/file_complaint_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_button"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rectangle_1"
+            android:elevation="80dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/file_compla"
+            android:textAppearance="@style/file_compla" />
+    </RelativeLayout>
+</ScrollView>
