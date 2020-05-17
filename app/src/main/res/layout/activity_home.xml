@@ -1,68 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.HomeActivity"
-    android:background="#ffffff">
-    <androidx.appcompat.widget.Toolbar
+    android:background="#ffffff"
+    tools:context=".home.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff">
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/name_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
             android:text="messy"
             android:textColor="#f9db22"
-            android:textSize="20sp"/>
-    </androidx.appcompat.widget.Toolbar>
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/name_tv"
-        android:layout_below="@id/toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Good morning Priyanshu!"
         android:textColor="#000000"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textSize="20sp" />
+        app:layout_constraintBottom_toTopOf="@+id/meals_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
     <TextView
         android:id="@+id/meals_tv"
-        android:layout_below="@id/name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="177dp"
+        android:fontFamily="sans-serif"
         android:text="Upcoming Meals"
         android:textColor="#000000"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv" />
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Bon Appetit"
         android:textColor="#000000"
-        android:layout_above="@id/todays_special"
-        android:layout_marginLeft="16dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/todays_special"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meals_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/upcoming_meals"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:foregroundGravity="center_vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meals_tv" />
+
     <RelativeLayout
         android:id="@+id/todays_special"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_above="@id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/curved_rectangle"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="8dp"
-        android:elevation="6dp">
+        android:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
         <ImageView
             android:id="@+id/food_img"
             android:layout_width="320dp"
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/food_img"/>
+            android:src="@drawable/food_img" />
+
         <TextView
             android:id="@+id/delight_tv"
             android:layout_width="match_parent"
@@ -72,62 +118,71 @@
             android:text="Today's Delight."
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp" />
+
         <TextView
             android:id="@+id/food_name_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Panner Butter Masala"
-            android:textSize="16sp"
-            android:layout_marginStart="22dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
             android:layout_below="@id/delight_tv"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="4dp"
+            android:text="Panner Butter Masala"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/food_intro_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:layout_below="@id/food_name_tv"
             android:layout_marginStart="22dp"
-            android:textColor="#000000"
-            android:text="Detail of food Item"
             android:layout_marginTop="4dp"
-            android:layout_below="@id/food_name_tv"/>
+            android:text="Detail of food Item"
+            android:textColor="#000000"
+            android:textSize="13sp" />
 
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="#000000"
         android:orientation="horizontal"
-        android:background="#000000">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todays_special">
+
         <Button
             android:id="@+id/btn_home"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/home_img"/>
+            android:background="@drawable/home_img" />
+
         <Button
             android:id="@+id/btn_qr"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/qr_img"/>
+            android:background="@drawable/qr_img" />
+
         <Button
             android:id="@+id/btn_complaint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/complaint_img"/>
+            android:background="@drawable/complaint_img" />
+
         <Button
             android:id="@+id/btn_profile"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/profile_img"/>
+            android:background="@drawable/profile_img" />
     </LinearLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
