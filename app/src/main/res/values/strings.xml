@@ -6,25 +6,14 @@
     <string name="sign_in">Sign in</string>
     <string name="forgot_pass">Forgot Password?</string>
     <string name="create_acco">Create Account</string>
+    <string name="edit_your_details">Edit your details</string>
+    <string name="save_details">Save Details</string>
+    <string name="create_account">Create Account</string>
+    <string name="email_add">Email Address</string>
+    <string name="name">Name</string>
+    <string name="room_no">Room Number</string>
+    <string name="enter_password">Enter a password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
 
-    <string name="complaint_s">Complaint Section</string>
-    <string name="issue">Issue</string>
-    <string name="description">Description</string>
-    <string name="upload_image">Upload Image</string>
-    <string name="file_compla">File Complaint</string>
-
-    <string name="vote_for_ch">Vote for change</string>
-    <string name="choose_meal">Choose meal type</string>
-    <string name="breakfast">Breakfast</string>
-    <string name="lunch">Lunch</string>
-    <string name="dinner">Dinner</string>
-    <string name="food_item">Food Item</string>
-    <string name="vote_for_adding">vote for adding</string>
-    <string name="vote_for_re">Vote for removing</string>
-    <string name="submit">Submit</string>
-
-    <string name="to_all_the_">
-        To all the students of Arya Mess :\nLet me set the scene: your friend John is rushing to get his daughter from school and his son to the soccer field, and he still needs to stop at the grocery store because there\'s nothing in the fridge. In the midst of this everyday madness, he gets a text message from Google with a verification code. He thinks,\"That\'s weird. Maybe I should log in to my email and see what\'s going on.\"
-    </string>
-    <string name="notice">Notice</string>
 </resources>
