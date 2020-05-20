@@ -27,4 +27,6 @@
         To all the students of Arya Mess :\nLet me set the scene: your friend John is rushing to get his daughter from school and his son to the soccer field, and he still needs to stop at the grocery store because there\'s nothing in the fridge. In the midst of this everyday madness, he gets a text message from Google with a verification code. He thinks,\"That\'s weird. Maybe I should log in to my email and see what\'s going on.\"
     </string>
     <string name="notice">Notice</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehaviour="single">
+        <item
+            android:id="@+id/side_nav_absence"
+            android:title="Record future absence" />
+        <item
+            android:id="@+id/side_nav_notices"
+            android:title="Notices" />
+        <item
+            android:id="@+id/side_nav_manage_payments"
+            android:title="Manage Payments"/>
+        <item
+            android:id="@+id/side_nav_vote_menu"
+            android:title="Vote for menu changes"/>
+    </group>
+
+
 
 </menu>
