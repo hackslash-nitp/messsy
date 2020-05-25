@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pay_1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="102dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.01"/>
+
+        <TextView
+            android:id="@+id/e_coupon"
+            android:layout_width="95dp"
+            android:layout_height="28dp"
+            android:text="@string/e_coupon"
+            android:textAppearance="@style/e_coupon"
+            app:layout_constraintLeft_toLeftOf="@id/back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.1"/>
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="370dp"
+            android:layout_height="270dp"
+            android:src="@drawable/qr_code"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/e_coupon"
+            android:layout_marginTop="46dp"/>
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="@string/customer_name"
+            android:textAppearance="@style/customer_name"
+            app:layout_constraintLeft_toLeftOf="@id/back_arrow"
+            app:layout_constraintTop_toBottomOf="@id/qr_code"
+            android:layout_marginTop="22dp"/>
+
+        <TextView
+            android:id="@+id/customer_roon_no"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="@string/customer_room_no"
+            android:textAppearance="@style/customer_room_no"
+            app:layout_constraintLeft_toLeftOf="@id/back_arrow"
+            app:layout_constraintTop_toBottomOf="@id/customer_name"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/current_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:text="@string/current_bal"
+            android:textAppearance="@style/current_bal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customer_name"
+            android:layout_marginTop="64dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
