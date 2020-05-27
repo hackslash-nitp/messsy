@@ -27,4 +27,11 @@
         To all the students of Arya Mess :\nLet me set the scene: your friend John is rushing to get his daughter from school and his son to the soccer field, and he still needs to stop at the grocery store because there\'s nothing in the fridge. In the midst of this everyday madness, he gets a text message from Google with a verification code. He thinks,\"That\'s weird. Maybe I should log in to my email and see what\'s going on.\"
     </string>
     <string name="notice">Notice</string>
+    <string name="absence_not">Absence Notification</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+
+    <string name="meals_that_">Meals that you\'ll miss</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AbsenceNotification">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+            <ImageView
+                android:id="@+id/arrow_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/arrow_1"
+                tools:ignore="ContentDescription"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/absence_not"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="@string/absence_not"
+                android:textAppearance="@style/absence_not"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/arrow_2"/>
+
+            <TextView
+                android:id="@+id/start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/start_date"
+                android:textAppearance="@style/start_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/absence_not"/>
+
+            <EditText
+                android:id="@+id/start_date_input"
+                android:layout_width="match_parent"
+                android:inputType="date"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#39374D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="@string/start_date"
+                android:textAppearance="@style/start_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/start_date_input"/>
+
+            <EditText
+                android:id="@+id/end_date_input"
+                android:layout_width="match_parent"
+                android:inputType="date"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#39374D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/end_date"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/meals_that_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/meals_that_"
+                android:textAppearance="@style/meals_that_"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/josefin_sans_semibold"
+                app:layout_constraintTop_toBottomOf="@id/end_date_input"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_buttom_group_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/meals_that_"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="19dp">
+
+                <RadioButton
+                    android:id="@+id/breakfast_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="5dp"
+                    android:text="@string/breakfast"
+                    android:textAppearance="@style/breakfast" />
+
+                <RadioButton
+                    android:id="@+id/lunch_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="8dp"
+                    android:text="@string/lunch"
+                    android:textAppearance="@style/lunch" />
+
+                <RadioButton
+                    android:id="@+id/dinner_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:button="@drawable/radio_button_selector"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:padding="8dp"
+                    android:text="@string/dinner"
+                    android:textAppearance="@style/dinner" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@id/radio_buttom_group_a"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/white_background"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="@string/cancel"
+                    android:textAppearance="@style/cancel"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/OK"
+                    android:layout_width="0dp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:layout_height="wrap_content"
+                    android:elevation="10dp"
+                    android:background="@drawable/white_background"
+                    android:textAppearance="@style/ok"
+                    android:text="@string/ok"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
+
