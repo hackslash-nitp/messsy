@@ -16,4 +16,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2020 krharsh17 <kharsh39@gmail.com>
+[ISC](LICENSE) © 2020 hackslash-nitp <hackslash.nitp@gmail.com>
