@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import in.hackslash.messsy.R;
 
-public class VaddoteActivity extends AppCompatActivity {
+public class VoteActivity extends AppCompatActivity {
 
     // TODO Declare instances for all UI elements
 
