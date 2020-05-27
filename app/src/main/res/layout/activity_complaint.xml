@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".complaint.ComplaintActivity">
+    tools:context=".user.ComplaintActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,9 +26,10 @@
             android:layout_below="@id/arrow_1"
             android:layout_marginStart="25dp"
             android:layout_marginTop="30dp"
+            android:textSize="28sp"
+            android:textColor="#000"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/complaint_s"
-            android:textAppearance="@style/complaint_s" />
+            android:text="Complaint Section" />
 
         <TextView
             android:id="@+id/issue"
@@ -37,9 +38,9 @@
             android:layout_below="@id/complaint_s"
             android:layout_marginStart="25dp"
             android:layout_marginTop="52dp"
+            android:textColor="#000"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/issue"
-            android:textAppearance="@style/issue" />
+            android:text="Issue"/>
 
         <EditText
             android:id="@+id/line_1"
@@ -61,8 +62,8 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/description"
-            android:textAppearance="@style/description" />
+            android:text="Description"
+            android:textColor="#000"/>
 
         <ImageView
             android:id="@+id/rectangle_4"
@@ -88,8 +89,8 @@
             android:elevation="12dp"
             android:fontFamily="@font/josefin_sans_bold"
             android:gravity="center"
-            android:text="@string/upload_image"
-            android:textAppearance="@style/upload_image" />
+            android:text="Upload Image"
+            android:textColor="#000"/>
 
         <Button
             android:id="@+id/file_complaint_button"
@@ -102,7 +103,7 @@
             android:background="@drawable/rectangle_1"
             android:elevation="80dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/file_compla"
-            android:textAppearance="@style/file_compla" />
+            android:text="File Complaint"
+            android:textColor="#fff" />
     </RelativeLayout>
 </ScrollView>

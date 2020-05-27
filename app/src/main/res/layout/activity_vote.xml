@@ -25,10 +25,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/arrow_1"
             android:layout_marginStart="25dp"
+            android:textSize="18sp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/vote_for_ch"
-            android:textAppearance="@style/vote_for_ch" />
+            android:text="Vote for Change"/>
 
         <TextView
             android:id="@+id/choose_meal"
@@ -38,8 +38,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="60dp"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:text="@string/choose_meal"
-            android:textAppearance="@style/choose_meal" />
+            android:text="Choose Meal" />
 
         <RadioGroup
             android:id="@+id/radio_buttom_group"
@@ -56,9 +55,7 @@
                 android:button="@drawable/radio_button_selector"
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:padding="8dp"
-                android:text="@string/breakfast"
-                android:textAppearance="@style/breakfast" />
-
+                android:text="Breakfast"/>
             <RadioButton
                 android:id="@+id/lunch"
                 android:layout_width="wrap_content"
@@ -67,8 +64,7 @@
                 android:button="@drawable/radio_button_selector"
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:padding="8dp"
-                android:text="@string/lunch"
-                android:textAppearance="@style/lunch" />
+                android:text="Lunch" />
 
             <RadioButton
                 android:id="@+id/dinner"
@@ -78,8 +74,7 @@
                 android:button="@drawable/radio_button_selector"
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:padding="8dp"
-                android:text="@string/dinner"
-                android:textAppearance="@style/dinner" />
+                android:text="Dinner" />
         </RadioGroup>
 
         <TextView
@@ -90,8 +85,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="45dp"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:text="@string/food_item"
-            android:textAppearance="@style/food_item" />
+            android:text="Food item" />
 
         <EditText
             android:id="@+id/enter_food_item"
@@ -112,9 +106,9 @@
             android:layout_marginTop="65dp"
             android:background="@drawable/white_background"
             android:elevation="8dp"
+            android:textSize="10sp"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:text="@string/vote_for_adding"
-            android:textAppearance="@style/vote_for_ad" />
+            android:text="Vote for adding" />
 
         <Button
             android:id="@+id/vote_for_re"
@@ -126,9 +120,9 @@
             android:layout_marginEnd="30dp"
             android:background="@drawable/white_background"
             android:elevation="8dp"
+            android:textSize="10sp"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:text="@string/vote_for_re"
-            android:textAppearance="@style/vote_for_re" />
+            android:text="Vote for Removing" />
 
         <Button
             android:id="@+id/submit_button"
@@ -141,7 +135,7 @@
             android:background="@drawable/rectangle_1"
             android:elevation="8dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="@string/submit"
-            android:textAppearance="@style/submit" />
+            android:text="Submit"
+            android:textColor="#fff"/>
     </RelativeLayout>
 </ScrollView>

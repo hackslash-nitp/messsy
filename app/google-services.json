@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "332908319886",
+    "firebase_url": "https://messsy-4e077.firebaseio.com",
+    "project_id": "messsy-4e077",
+    "storage_bucket": "messsy-4e077.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332908319886:android:d3c272da547b349ca565df",
+        "android_client_info": {
+          "package_name": "in.hackslash.messsy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332908319886-bl2q6tu77e8s3oh8vl9f1bai5irvhjhg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.hackslash.messsy",
+            "certificate_hash": "bf3ffcf1e61f2ff16ee114663c488fbe31696e5a"
+          }
+        },
+        {
+          "client_id": "332908319886-pi1uajbf9ii1itbem8v33kliq987s7a7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzFKaTQXWpCiN5udCun1VwqmCPA27vSgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332908319886-pi1uajbf9ii1itbem8v33kliq987s7a7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
