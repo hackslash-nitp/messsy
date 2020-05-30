@@ -24,7 +24,6 @@ public class UpcomingRecycler extends RecyclerView.Adapter<UpcomingRecycler.View
         mContext = context;
     }
 
-    // Use upcoming_meal.xml to define the layout of single item of the list and remove this comment when don
     @NonNull
     @Override
     public UpcomingRecycler.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -1,10 +1,10 @@
-package in.hackslash.messsy.home;
+package in.hackslash.messsy.models;
 
-public class CardViewModel {
+public class UpcomingMealCardViewModel {
     int foodImage;
     String nameFood;
 
-    public CardViewModel(int foodImage, String nameFood) {
+    public UpcomingMealCardViewModel(int foodImage, String nameFood) {
         this.foodImage = foodImage;
         this.nameFood = nameFood;
     }

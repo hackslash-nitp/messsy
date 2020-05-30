@@ -12,15 +12,15 @@
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/upcomingcard_pic"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginLeft="18dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
             android:layout_marginBottom="36dp"
-            android:src="@drawable/boiled_eggs" />
+            android:src="@drawable/boiled_eggs"/>
 
         <TextView
             android:id="@+id/upcomingcard_name"
