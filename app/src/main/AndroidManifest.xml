@@ -15,6 +15,7 @@
         <activity android:name=".complaint.NoticeActivity" />
 
         <activity android:name=".vote.VoteActivity" />
+        <activity android:name=".complaint.NoticeActivity" />
         <activity android:name=".onboarding.EditProfileActivity" />
         <activity android:name=".onboarding.CreateAccountActivity" />
         <activity android:name=".onboarding.LoginActivity" >
