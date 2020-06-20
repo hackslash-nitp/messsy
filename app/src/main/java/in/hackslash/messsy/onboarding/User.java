@@ -12,6 +12,7 @@ public class User {
         this.email = email;
         this.name = name;
         this.roomno = roomno;
+        this.uid=uid;
     }
 
     public String getUid() {
