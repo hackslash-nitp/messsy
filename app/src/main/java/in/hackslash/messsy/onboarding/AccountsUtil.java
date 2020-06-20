@@ -31,7 +31,8 @@ public class AccountsUtil {
             onCompleteListener.onComplete(Status.ALREADY_LOGGED_IN, user);
         }
         //  Validate user here and return WRONG_INPUT if anything is wrong
-        else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() || password.length() < 6) {
+        else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() || password.length() < 6
+                               || user.getName().length()==0 || user.getRoomno().length()==0) {
             onCompleteListener.onComplete(Status.WRONG_INPUT, user);
         }
         //  Check DB if the user exists and return DUPLICATE_USER if user exists
@@ -216,7 +217,7 @@ public class AccountsUtil {
                                 String name=doc.getString("name");
                                 String roomno=doc.getString("roomno");
                                 String email=doc.getString("email");
-                                User user=new User(email,name,roomno);
+                                User user=new User(email,name,roomno,userID);
                                 onCompleteListener.onComplete(Status.SUCCESS,user);
                             }
                             else{

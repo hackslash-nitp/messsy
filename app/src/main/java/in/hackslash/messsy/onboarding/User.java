@@ -3,15 +3,23 @@ package in.hackslash.messsy.onboarding;
 public class User {
 
     // TODO add user fields here
-    private String email,name,roomno;
+    private String email,name,roomno,uid;
 
     public User(){
 
     }
-    public User(String email, String name, String roomno) {
+    public User(String email, String name, String roomno,String uid) {
         this.email = email;
         this.name = name;
         this.roomno = roomno;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getEmail() {
