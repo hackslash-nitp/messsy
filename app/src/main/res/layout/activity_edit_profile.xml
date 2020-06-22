@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/edit_profile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical"
         tools:context=".MainActivity">
@@ -23,6 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_alignStart="@id/line_1"
             android:text="@string/edit_your_details"
             android:textAppearance="@style/edit_your_details"
@@ -40,6 +41,7 @@
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_height="wrap_content"
             android:layout_below="@id/breakfast_image"
             android:layout_marginTop="28dp"
@@ -66,10 +68,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/line_1"
             android:layout_alignStart="@id/line_2"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
-            android:text="@string/email_add"
-            android:textAppearance="@style/email_add" />
+            android:text="@string/email"
+            android:textAppearance="@style/email" />
 
         <EditText
             android:id="@+id/line_2"
@@ -87,6 +90,7 @@
             android:id="@+id/room_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_below="@id/line_2"
             android:layout_alignStart="@id/line_3"
             android:layout_marginStart="3dp"
@@ -113,6 +117,7 @@
             android:layout_below="@id/line_3"
             android:layout_alignStart="@id/line_4"
             android:layout_marginStart="3dp"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_marginTop="0dp"
             android:text="@string/enter_password"
             android:textAppearance="@style/enter_password" />
@@ -135,8 +140,10 @@
             android:layout_height="55dp"
             android:layout_below="@id/line_4"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/josefin_sans_bold"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="40dp"
+            android:textAllCaps="false"
             android:background="@drawable/rectangle_1"
             android:elevation="10dp"
             android:text="@string/save_details"

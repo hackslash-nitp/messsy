@@ -34,4 +34,13 @@
     <string name="meals_that_">Meals that you\'ll miss</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+
+    <string name="name">Name</string>
+    <string name="room_no">Room no</string>
+    <string name="enter_password">Password</string>
+    <string name="already_have_an_account">already have an account?</string>
+    <string name="log_in">Log in</string>
+
+    <string name="edit_your_details">Edit your details</string>
+    <string name="save_details">Save Details</string>
 </resources>
