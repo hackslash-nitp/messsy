@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.ComplaintActivity">
+    tools:context="in.hackslash.messsy.complaint.ComplaintActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,6 +18,22 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/arrow_1"
             tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rectangle_4"
+            android:layout_alignTop="@+id/rectangle_4"
+            android:layout_alignEnd="@+id/rectangle_4"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@null"
+            android:ems="10"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"
+            android:maxLines="7" />
 
         <TextView
             android:id="@+id/complaint_s"
