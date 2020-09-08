@@ -16,13 +16,6 @@ public class User {
         this.uid=uid;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-
     public String getEmail() {
         return email;
     }
@@ -45,5 +38,13 @@ public class User {
 
     public void setRoomno(String roomno) {
         this.roomno = roomno;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 }
