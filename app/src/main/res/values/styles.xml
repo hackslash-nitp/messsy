@@ -302,4 +302,18 @@
         </item>
 
     </style>
+
+    <style name="name"></style>
+
+    <style name="email_add"></style>
+
+    <style name="room_no"></style>
+
+    <style name="enter_password"></style>
+
+    <style name="already_have_an_account"></style>
+
+    <style name="log_in"></style>
+
+    <style name="edit_your_details"></style>
 </resources>
