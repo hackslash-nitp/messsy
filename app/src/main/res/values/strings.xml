@@ -34,4 +34,13 @@
     <string name="meals_that_">Meals that you\'ll miss</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="name" />
+    <string name="email_add" />
+    <string name="room_no" />
+    <string name="enter_password" />
+    <string name="create_account" />
+    <string name="already_have_an_account" />
+    <string name="log_in" />
+    <string name="edit_your_details" />
+    <string name="save_details" />
 </resources>
