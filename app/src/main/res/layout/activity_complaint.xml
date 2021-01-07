@@ -80,15 +80,36 @@
             android:fontFamily="@font/josefin_sans_bold"
             android:text="Description"
             android:textColor="#000"/>
+        <EditText
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#39374D"
+            android:inputType="text"
+            android:textColor="#000000"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_2"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="28dp"
+            android:textColor="#000"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Complaint Image" />
 
         <ImageView
             android:id="@+id/rectangle_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/description"
+            android:layout_below="@id/img"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="4dp"
             android:layout_marginEnd="30dp"
             android:scaleType="fitXY"
             android:src="@drawable/description_box"

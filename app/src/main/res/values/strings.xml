@@ -29,7 +29,7 @@
     <string name="notice">Notice</string>
     <string name="absence_not">Absence Notification</string>
     <string name="start_date">Start Date</string>
-    <string name="end_date">End Date</string>
+
 
     <string name="meals_that_">Meals that you\'ll miss</string>
     <string name="ok">OK</string>
@@ -43,4 +43,5 @@
     <string name="log_in" />
     <string name="edit_your_details" />
     <string name="save_details" />
+    <string name="end_date">End Date</string>
 </resources>
