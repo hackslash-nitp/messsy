@@ -69,7 +69,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/josefin_sans_semibold"
-                android:text="@string/start_date"
+                android:text="@string/end_date"
                 android:textAppearance="@style/start_date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/start_date_input"/>
