@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.home.HomeActivity;
 
@@ -123,5 +126,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
+    protected void onStart(){
+        super.onStart();
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(currentUser!=null){
+            startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+            finish();
+        }
+    }
 }

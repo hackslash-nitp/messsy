@@ -44,4 +44,9 @@
     <string name="edit_your_details" />
     <string name="save_details" />
     <string name="end_date">End Date</string>
+    <string name="home">home</string>
+    <string name="qrcode">qrcode</string>
+    <string name="profile">profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

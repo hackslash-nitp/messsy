@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AbsenceNotification"/>
         <activity android:name=".complaint.NoticeActivity" />
-
+        <activity android:name=".complaint.ComplaintActivity"/>
         <activity android:name=".vote.VoteActivity" />
         <activity android:name=".onboarding.EditProfileActivity" />
         <activity android:name=".onboarding.CreateAccountActivity" />

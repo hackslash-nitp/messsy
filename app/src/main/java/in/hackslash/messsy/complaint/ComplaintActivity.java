@@ -46,7 +46,7 @@ public class ComplaintActivity extends AppCompatActivity {
         issue=findViewById(R.id.line_1);
         des=findViewById(R.id.line_2);
         upload=findViewById(R.id.upload_button);
-        submit=findViewById(R.id.submit_button);
+        submit=findViewById(R.id.file_complaint_button);
         mstorageReference= FirebaseStorage.getInstance().getReference().child("images");
 
 
@@ -118,6 +118,7 @@ public class ComplaintActivity extends AppCompatActivity {
         String s2=des.getText().toString();
         Complaint complaint=new Complaint(s1,s2,s);
         complaintRef.add(complaint);
+        Toast.makeText(this, "complaint added", Toast.LENGTH_SHORT).show();
 
     }
 }

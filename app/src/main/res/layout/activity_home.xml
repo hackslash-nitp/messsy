@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity"
-    android:background="#ffffff">
+    >
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -18,116 +18,102 @@
             android:textColor="#f9db22"
             android:textSize="20sp"/>
     </androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:id="@+id/name_tv"
-        android:layout_below="@id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Good morning Priyanshu!"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:textStyle="bold"
-        android:textSize="20sp" />
-    <TextView
-        android:id="@+id/meals_tv"
-        android:layout_below="@id/name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upcoming Meals"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:textSize="12sp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bon Appetit"
-        android:textColor="#000000"
-        android:layout_above="@id/todays_special"
-        android:layout_marginLeft="16dp"/>
-    <RelativeLayout
-        android:id="@+id/todays_special"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_above="@id/bottom_nav"
-        android:background="@drawable/curved_rectangle"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="8dp"
-        android:elevation="6dp">
-        <ImageView
-            android:id="@+id/food_img"
-            android:layout_width="320dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/food_img"/>
-        <TextView
-            android:id="@+id/delight_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/food_img"
-            android:layout_marginStart="22dp"
-            android:text="Today's Delight."
-            android:textColor="@android:color/darker_gray"
-            android:textSize="12sp" />
-        <TextView
-            android:id="@+id/food_name_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Panner Butter Masala"
-            android:textSize="16sp"
-            android:layout_marginStart="22dp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_below="@id/delight_tv"
-            android:layout_marginTop="4dp"/>
-        <TextView
-            android:id="@+id/food_intro_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:layout_marginStart="22dp"
-            android:textColor="#000000"
-            android:text="Detail of food Item"
-            android:layout_marginTop="4dp"
-            android:layout_below="@id/food_name_tv"/>
+    <!--    <TextView-->
+    <!--        android:id="@+id/name_tv"-->
+    <!--        android:layout_below="@id/toolbar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Good morning Priyanshu!"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:fontFamily="sans-serif-medium"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:textSize="20sp" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/meals_tv"-->
+    <!--        android:layout_below="@id/name_tv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Upcoming Meals"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:fontFamily="sans-serif"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:textSize="12sp" />-->
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Bon Appetit"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:layout_above="@id/todays_special"-->
+    <!--        android:layout_marginLeft="16dp"/>-->
 
-    </RelativeLayout>
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/todays_special"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="300dp"-->
+    <!--        android:layout_above="@id/btm_nav"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginBottom="79dp"-->
+    <!--        android:background="@drawable/curved_rectangle"-->
+    <!--        android:elevation="6dp">-->
 
-    <LinearLayout
-        android:id="@+id/bottom_nav"
+    <!--        <ImageView-->
+    <!--            android:id="@+id/food_img"-->
+    <!--            android:layout_width="320dp"-->
+    <!--            android:layout_height="200dp"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:src="@drawable/food_img" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/delight_tv"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/food_img"-->
+    <!--            android:layout_marginStart="22dp"-->
+    <!--            android:text="Today's Delight."-->
+    <!--            android:textColor="@android:color/darker_gray"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/food_name_tv"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/delight_tv"-->
+    <!--            android:layout_marginStart="22dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="Panner Butter Masala"-->
+    <!--            android:textColor="#000000"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/food_intro_tv"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/food_name_tv"-->
+    <!--            android:layout_marginStart="22dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="Detail of food Item"-->
+    <!--            android:textColor="#000000"-->
+    <!--            android:textSize="13sp" />-->
+
+    <!--    </RelativeLayout>-->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btm_nav"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/frameContainer"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#000000">
-        <Button
-            android:id="@+id/btn_home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/home_img"/>
-        <Button
-            android:id="@+id/btn_qr"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/qr_img"/>
-        <Button
-            android:id="@+id/btn_complaint"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/complaint_img"/>
-        <Button
-            android:id="@+id/btn_profile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/profile_img"/>
-    </LinearLayout>
+        android:background="@drawable/white_background"
+        app:menu="@menu/menu"/>
 
 
 </RelativeLayout>
