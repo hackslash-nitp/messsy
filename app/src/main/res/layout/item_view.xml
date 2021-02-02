@@ -9,11 +9,9 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
 
-        tools:text="gauri"
-        android:id="@+id/text_view"/>
-</LinearLayout>
-
         tools:text="sample notice"
         android:id="@+id/text_view"/>
+
+
 </LinearLayout>
 

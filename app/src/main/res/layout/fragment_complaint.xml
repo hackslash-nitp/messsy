@@ -1,23 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.ComplaintFragment">
 
-    <Button
-        android:id="@+id/compBtn"
-        android:layout_width="wrap_content"
+<!--    <Button-->
+<!--        android:id="@+id/compBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#149548"-->
+<!--        android:text=" File a Complaint"-->
+<!--        android:textAllCaps="true"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#149548"
-        android:text=" File a Complaint"
-        android:textAllCaps="true"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:paddingBottom="43dp">
+
+        <ImageView
+            android:id="@+id/arrow_1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/arrow_1"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rectangle_4"
+            android:layout_alignTop="@+id/rectangle_4"
+            android:layout_alignEnd="@+id/rectangle_4"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@null"
+            android:ems="10"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"
+            android:maxLines="7" />
+
+        <TextView
+            android:id="@+id/complaint_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arrow_1"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:textSize="28sp"
+            android:textColor="#000"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Complaint Section" />
+
+        <TextView
+            android:id="@+id/issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complaint_s"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="52dp"
+            android:textColor="#000"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Issue"/>
+
+        <EditText
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issue"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#39374D"
+            android:inputType="text"
+            android:textColor="#000000"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_1"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Description"
+            android:textColor="#000"/>
+        <EditText
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#39374D"
+            android:inputType="text"
+            android:textColor="#000000"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_2"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="28dp"
+            android:textColor="#000"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Complaint Image" />
+
+        <ImageView
+            android:id="@+id/rectangle_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/description_box"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="135dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/rectangle_4"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/white_background"
+            android:elevation="12dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:gravity="center"
+            android:text="Upload Image"
+            android:textColor="#000"/>
+
+        <Button
+            android:id="@+id/file_complaint_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upload_button"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rectangle_1"
+            android:elevation="80dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="File Complaint"
+            android:textColor="#fff" />
+    </RelativeLayout>
+</ScrollView>
