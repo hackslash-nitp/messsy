@@ -11,5 +11,7 @@
 
         tools:text="sample notice"
         android:id="@+id/text_view"/>
+
+
 </LinearLayout>
 
