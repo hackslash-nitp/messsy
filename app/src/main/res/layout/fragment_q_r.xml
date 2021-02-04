@@ -8,19 +8,6 @@
     android:padding="24dp"
     tools:context=".home.QRFragment">
 
-    <Button
-        android:id="@+id/generate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:background="#7BDC58"
-        android:padding="16dp"
-        android:text="Generate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent" />
-
 
     <ImageView
         android:id="@+id/imageViewQR"

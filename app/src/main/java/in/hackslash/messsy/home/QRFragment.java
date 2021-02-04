@@ -19,6 +19,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
@@ -91,28 +93,24 @@ public class QRFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView=inflater.inflate(R.layout.fragment_q_r, container, false);
-        b1=rootView.findViewById(R.id.generate);
         txt=rootView.findViewById(R.id.nameID);
         img=rootView.findViewById(R.id.imageViewQR);
         QRstorageReference= FirebaseStorage.getInstance().getReference().child("QRcode");
+        gen();
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gen();
-            }
-        });
         return rootView;
     }
     private void gen(){
         final String data=txt.getText().toString();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String email = user.getEmail();
         if(img.getDrawable()==null) {
-            QRGEncoder qrgEncoder = new QRGEncoder(data, null, QRGContents.Type.TEXT, 200);
+            QRGEncoder qrgEncoder = new QRGEncoder(email, null, QRGContents.Type.TEXT, 300);
             Bitmap QRBits = qrgEncoder.getBitmap();
             img.setImageBitmap(QRBits);
 
             Uri uri=getImageUri(getContext(),QRBits);
-            Log.d("abcd","Uri is"+uri);
+            Log.d("abcd","Uri is "+email);
 //            StorageReference photoRef = QRstorageReference.child(uri.getLastPathSegment());
 
 //            photoRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -124,10 +122,7 @@ public class QRFragment extends Fragment {
 //            });
 
         }
-        else {
 
-            Toast.makeText(getActivity(), "QR already generated"+time, Toast.LENGTH_SHORT).show();
-        }
     }
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
