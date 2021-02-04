@@ -52,7 +52,6 @@ public class ComplaintFragment extends Fragment {
     FirebaseFirestore dbs = FirebaseFirestore.getInstance();
     private final CollectionReference complaintRef = dbs.collection("ComplaintSection");
 
-=======
     Button b1;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -107,6 +106,7 @@ public class ComplaintFragment extends Fragment {
 
         imgView=rootView.findViewById(R.id.rectangle_4);
         submit=rootView.findViewById(R.id.file_complaint_button);
+        b1=rootView.findViewById(R.id.file_complaint_button);
 
         mstorageReference= FirebaseStorage.getInstance().getReference().child("images");
         setup();
@@ -174,8 +174,6 @@ public class ComplaintFragment extends Fragment {
         complaintRef.add(complaint);
 
         Toast.makeText(getActivity(), "complaint added", Toast.LENGTH_SHORT).show();
-=======
-        b1=rootView.findViewById(R.id.compBtn);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -183,7 +181,6 @@ public class ComplaintFragment extends Fragment {
             }
         });
 
-        return rootView;
     }
     public void fileComplaint(View v)
     {

@@ -50,7 +50,6 @@ public class ComplaintActivity extends AppCompatActivity {
 
 
         submit=findViewById(R.id.file_complaint_button);
-=======
         submit=findViewById(R.id.submit_button);
 
 
