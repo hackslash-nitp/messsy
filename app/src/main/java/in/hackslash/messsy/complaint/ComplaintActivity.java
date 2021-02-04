@@ -48,7 +48,11 @@ public class ComplaintActivity extends AppCompatActivity {
         upload=findViewById(R.id.upload_button);
 
 
+
         submit=findViewById(R.id.file_complaint_button);
+=======
+        submit=findViewById(R.id.submit_button);
+
 
         mstorageReference= FirebaseStorage.getInstance().getReference().child("images");
 

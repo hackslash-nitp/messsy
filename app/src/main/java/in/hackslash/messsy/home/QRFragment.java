@@ -30,6 +30,13 @@ import java.io.ByteArrayOutputStream;
 
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+
 import in.hackslash.messsy.R;
 
 /**
@@ -49,6 +56,7 @@ public class QRFragment extends Fragment {
     String date;
     ImageView img;
     TextView txt;
+
 
 
     // TODO: Rename and change types of parameters
@@ -134,5 +142,6 @@ public class QRFragment extends Fragment {
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
         return Uri.parse(path);
+        return inflater.inflate(R.layout.fragment_q_r, container, false);
     }
 }

@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,10 @@ import com.google.firebase.storage.UploadTask;
 
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.complaint.Complaint;
+
+import androidx.fragment.app.Fragment;
+
+import in.hackslash.messsy.R;
 import in.hackslash.messsy.complaint.ComplaintActivity;
 
 /**
@@ -46,6 +52,8 @@ public class ComplaintFragment extends Fragment {
     FirebaseFirestore dbs = FirebaseFirestore.getInstance();
     private final CollectionReference complaintRef = dbs.collection("ComplaintSection");
 
+=======
+    Button b1;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -166,6 +174,21 @@ public class ComplaintFragment extends Fragment {
         complaintRef.add(complaint);
 
         Toast.makeText(getActivity(), "complaint added", Toast.LENGTH_SHORT).show();
+=======
+        b1=rootView.findViewById(R.id.compBtn);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fileComplaint(v);
+            }
+        });
+
+        return rootView;
+    }
+    public void fileComplaint(View v)
+    {
+        Intent intent = new Intent(getActivity(), ComplaintActivity.class);
+        startActivity(intent);
     }
 
 }
