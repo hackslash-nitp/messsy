@@ -46,13 +46,18 @@
         android:layout_above="@+id/text"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="79dp"
-        android:elevation="6dp">
+        android:background="@drawable/curved_rectangle"
+
+      android:elevation="6dp">
 
         <ImageView
             android:id="@+id/food_img"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@drawable/curved_rectangle"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/food_img" />
 
         <TextView

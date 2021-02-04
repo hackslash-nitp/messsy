@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.HomeActivity">
+    tools:context=".home.HomeActivity"
+    >
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -115,6 +117,45 @@
         app:itemIconTint="@drawable/menu_color"
         app:itemTextColor="@drawable/menu_color"
 
+=======
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/food_name_tv"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/delight_tv"-->
+    <!--            android:layout_marginStart="22dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="Panner Butter Masala"-->
+    <!--            android:textColor="#000000"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/food_intro_tv"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/food_name_tv"-->
+    <!--            android:layout_marginStart="22dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="Detail of food Item"-->
+    <!--            android:textColor="#000000"-->
+    <!--            android:textSize="13sp" />-->
+
+    <!--    </RelativeLayout>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btm_nav"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/frameContainer"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/white_background"
         app:menu="@menu/menu"/>
 
 
