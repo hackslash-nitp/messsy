@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/edit_profile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical"
         tools:context=".MainActivity">
@@ -23,7 +23,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="30dp"
-            android:layout_alignStart="@id/line_1"
+            android:layout_alignStart="@id/name"
             android:text="@string/edit_your_details"
             android:textAppearance="@style/edit_your_details"
             android:textSize="33sp"/>
@@ -35,115 +35,128 @@
             android:layout_height="170dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="120dp"
-            android:src="@drawable/breakfast" />
+            android:src="@drawable/breakfast"
+            android:contentDescription="@string/breakfast_image" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/breakfast_image"
             android:layout_marginTop="28dp"
-            android:layout_alignStart="@id/line_1"
+            android:layout_alignStart="@id/name"
             android:layout_marginStart="3dp"
             android:text="@string/name"
             android:textAppearance="@style/name" />
 
         <EditText
-            android:id="@+id/line_1"
+            android:id="@+id/name"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name"
+            android:layout_below="@id/name_text"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
+            android:inputType="text"
+            android:textColor="#000000"
+            android:autofillHints="" />
 
         <TextView
-            android:id="@+id/email_address"
+            android:id="@+id/email_address_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_1"
-            android:layout_alignStart="@id/line_2"
+            android:layout_below="@id/name"
+            android:layout_alignStart="@id/email"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/email_add"
-            android:textAppearance="@style/email_add" />
+            android:textAppearance="@style/email" />
 
         <EditText
-            android:id="@+id/line_2"
+            android:id="@+id/email"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/email_address"
+            android:layout_below="@id/email_address_text"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
             android:inputType="textEmailAddress"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:autofillHints="" />
 
         <TextView
-            android:id="@+id/room_no"
+            android:id="@+id/room_no_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_2"
-            android:layout_alignStart="@id/line_3"
+            android:layout_below="@id/email"
+            android:layout_alignStart="@id/room_no"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/room_no"
             android:textAppearance="@style/room_no" />
 
         <EditText
-            android:id="@+id/line_3"
+            android:id="@+id/room_no"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/room_no"
+            android:layout_below="@id/room_no_text"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
+            android:inputType="text"
+            android:textColor="#000000"
+            android:autofillHints="" />
 
         <TextView
-            android:id="@+id/enter_password"
+            android:id="@+id/enter_password_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_3"
-            android:layout_alignStart="@id/line_4"
+            android:layout_below="@id/room_no"
+            android:layout_alignStart="@id/password"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/enter_password"
-            android:textAppearance="@style/enter_password" />
+            android:textAppearance="@style/password" />
 
         <EditText
-            android:id="@+id/line_4"
+            android:id="@+id/password"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/enter_password"
+            android:layout_below="@id/enter_password_text"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
+            android:inputType="textPassword"
+            android:textColor="#000000"
+            android:importantForAutofill="no" />
 
         <Button
-            android:id="@+id/rectangle_1"
+            android:id="@+id/save_button"
             android:layout_width="290dp"
             android:layout_height="55dp"
-            android:layout_below="@id/line_4"
+            android:layout_below="@id/password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/rectangle_1"
             android:elevation="10dp"
             android:text="@string/save_details"
+            android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:indeterminate="true"/>
 
     </RelativeLayout>
 </ScrollView>
