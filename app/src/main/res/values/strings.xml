@@ -50,5 +50,11 @@
     <string name="profile">profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_coupan">View Coupan</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="xyz">XYZ</string>
+    <string name="room_no_339">Room No. 339</string>
+    <string name="profile1">Profile</string>
+    <string name="view_coupon">View Coupon</string>
 
 </resources>

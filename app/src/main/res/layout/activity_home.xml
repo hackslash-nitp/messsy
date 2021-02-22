@@ -58,7 +58,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/white_background"
+        android:background="#000"
+        app:itemTextColor="@drawable/menu_color"
+        app:itemIconTint="@drawable/menu_color"
         app:menu="@menu/menu"/>
 
 
