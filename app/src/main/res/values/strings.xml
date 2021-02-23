@@ -56,6 +56,14 @@
     <string name="room_no_339">Room No. 339</string>
     <string name="profile1">Profile</string>
     <string name="view_coupon">View Coupon</string>
+
+    <string name="absence">Record future absence</string>
+    <string name="payment">Manage Payments</string>
+    <string name="change">Vote for menu Change</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="breakfast_image">Breakfast image</string>
+
 
 </resources>

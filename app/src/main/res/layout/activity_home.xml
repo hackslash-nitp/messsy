@@ -1,67 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.HomeActivity">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffff">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="messy"
-            android:textColor="#f9db22"
-            android:textSize="20sp"/>
-    </androidx.appcompat.widget.Toolbar>
+    android:fitsSystemWindows="true"
+    tools:context=".home.HomeActivity"
+    tools:openDrawer="end">
 
-
-
-
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/food_name_tv"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_below="@id/delight_tv"-->
-    <!--            android:layout_marginStart="22dp"-->
-    <!--            android:layout_marginTop="4dp"-->
-    <!--            android:text="Panner Butter Masala"-->
-    <!--            android:textColor="#000000"-->
-    <!--            android:textSize="16sp"-->
-    <!--            android:textStyle="bold" />-->
-
-    <!--        <TextView-->
-    <!--            android:id="@+id/food_intro_tv"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_below="@id/food_name_tv"-->
-    <!--            android:layout_marginStart="22dp"-->
-    <!--            android:layout_marginTop="4dp"-->
-    <!--            android:text="Detail of food Item"-->
-    <!--            android:textColor="#000000"-->
-    <!--            android:textSize="13sp" />-->
-
-    <!--    </RelativeLayout>-->
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btm_nav"
-        android:layout_below="@+id/toolbar"
-        android:id="@+id/frameContainer"/>
+        tools:context=".home.HomeActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btm_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#000"
-        app:itemTextColor="@drawable/menu_color"
-        app:itemIconTint="@drawable/menu_color"
-        app:menu="@menu/menu"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#ffffff"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f9db22"
+                android:textSize="20sp" />
+        </androidx.appcompat.widget.Toolbar>
 
 
-</RelativeLayout>
+        <!--        <TextView-->
+        <!--            android:id="@+id/food_name_tv"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/delight_tv"-->
+        <!--            android:layout_marginStart="22dp"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:text="Panner Butter Masala"-->
+        <!--            android:textColor="#000000"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/food_intro_tv"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/food_name_tv"-->
+        <!--            android:layout_marginStart="22dp"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:text="Detail of food Item"-->
+        <!--            android:textColor="#000000"-->
+        <!--            android:textSize="13sp" />-->
+
+        <!--    </RelativeLayout>-->
+        <FrameLayout
+            android:id="@+id/frameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btm_nav"
+            android:layout_below="@+id/toolbar" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btm_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemIconTint="@drawable/menu_color"
+            app:itemTextColor="@drawable/menu_color"
+            app:menu="@menu/menu" />
+
+
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:background="#373549"
+        app:itemTextColor="#fff"
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

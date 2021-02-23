@@ -116,8 +116,8 @@ public class QRFragment extends Fragment {
             QRGEncoder qrgEncoder = new QRGEncoder(email, null, QRGContents.Type.TEXT, 300);
             Bitmap QRBits = qrgEncoder.getBitmap();
             img.setImageBitmap(QRBits);
-
-            Uri uri=getImageUri(getContext(),QRBits);
+//
+//            Uri uri=getImageUri(getContext(),QRBits);
             Log.d("abcd","Uri is "+email);
 //            StorageReference photoRef = QRstorageReference.child(uri.getLastPathSegment());
 

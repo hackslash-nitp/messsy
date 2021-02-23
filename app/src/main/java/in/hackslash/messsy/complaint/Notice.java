@@ -27,10 +27,9 @@ import in.hackslash.messsy.R;
         return v1;
     }
      void updatefood(ArrayList<String> f){
-         arrayList.clear();
+//         arrayList.clear();
          arrayList.addAll(f);
          notifyDataSetChanged();
-
      }
 
     @Override
