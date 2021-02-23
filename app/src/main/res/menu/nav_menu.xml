@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_absence"
+            android:title="@string/absence" />
+
+        <item
+            android:id="@+id/menu_notice"
+            android:title="@string/notice" />
+        <item
+            android:id="@+id/menu_payment"
+            android:title="@string/payment" />
+
+        <item
+            android:id="@+id/menu_change"
+            android:title="@string/change" />
+    </group>
+</menu>
