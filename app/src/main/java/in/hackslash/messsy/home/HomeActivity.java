@@ -90,7 +90,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.menu_payment:
-                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();                break;
+                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
+                break;
 
             case R.id.menu_change:
                 startActivity(new Intent(HomeActivity.this, VoteActivity.class));
