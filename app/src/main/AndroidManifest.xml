@@ -2,23 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="in.hackslash.messsy">
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:theme="@style/AppTheme">
-        <activity android:name=".AbsenceNotification"/>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AbsenceNotification" />
         <activity android:name=".complaint.NoticeActivity" />
-        <activity android:name=".complaint.ComplaintActivity"/>
+        <activity android:name=".complaint.ComplaintActivity" />
         <activity android:name=".vote.VoteActivity" />
         <activity android:name=".onboarding.EditProfileActivity" />
         <activity android:name=".onboarding.CreateAccountActivity" />
-        <activity android:name=".onboarding.LoginActivity" >
+        <activity android:name=".onboarding.ForgotPassword" />
+        <activity android:name=".onboarding.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +30,7 @@
         </activity>
         <activity
             android:name=".home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
