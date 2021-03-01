@@ -113,7 +113,8 @@ public class LoginActivity extends AppCompatActivity {
                         } else if (status == AccountsUtil.Status.SUCCESS) {
                             //logged in successful
                             progressBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "lo" +
+                                    "gin successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                             finish();
