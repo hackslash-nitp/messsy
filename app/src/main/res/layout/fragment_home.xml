@@ -1,103 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".home.HomeFragment">
-    <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
     <TextView
-        android:id="@+id/name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Good morning Priyanshu!"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:textStyle="bold"
-        android:textSize="20sp" />
-    <TextView
-        android:id="@+id/meals_tv"
-        android:layout_below="@id/name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upcoming Meals"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:textSize="12sp" />
-    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bon Appetit"
-        android:textColor="#000000"
-        android:layout_above="@id/todays_special"
-        android:layout_marginLeft="16dp"/>
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/good_morning_peter"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="30sp" />
 
-    <RelativeLayout
-        android:id="@+id/todays_special"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_above="@+id/text"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="79dp"
-
-      android:elevation="6dp">
-
-        <ImageView
-            android:id="@+id/food_img"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/curved_rectangle"
-
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/food_img" />
-
-        <TextView
-            android:id="@+id/delight_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@id/food_img"
-            android:layout_marginStart="22dp"
-            android:text="Today's Delight."
-            android:textColor="@android:color/darker_gray"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/food_name_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/delight_tv"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="4dp"
-            android:text="Panner Butter Masala"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/food_intro_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/food_name_tv"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="4dp"
-            android:text="Detail of food Item"
-            android:textColor="#000000"
-            android:textSize="13sp" />
-
-    </RelativeLayout>
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/upcoming_meals"
+        android:textColor="@color/design_default_color_primary_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/first"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ticket" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/second"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/bread" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/third"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@drawable/ticket" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/milk" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        app:srcCompat="@drawable/line"
+        tools:srcCompat="@drawable/line" />
 
-</RelativeLayout>
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/bon"
+        tools:srcCompat="@drawable/bon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/food"
+        android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
