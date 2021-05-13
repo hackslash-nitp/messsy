@@ -21,6 +21,7 @@ import in.hackslash.messsy.AbsenceNotification;
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.complaint.Notice;
 import in.hackslash.messsy.complaint.NoticeActivity;
+import in.hackslash.messsy.payment.PaymentDetails;
 import in.hackslash.messsy.vote.Vote;
 import in.hackslash.messsy.vote.VoteActivity;
 
@@ -90,7 +91,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.menu_payment:
-                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PaymentDetails.class));
                 break;
 
             case R.id.menu_change:
