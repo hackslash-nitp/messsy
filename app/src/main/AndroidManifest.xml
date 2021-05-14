@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".payment.PaymentDetails"/>
         <activity android:name=".AbsenceNotification" />
         <activity android:name=".complaint.NoticeActivity" />
         <activity android:name=".complaint.ComplaintActivity" />
@@ -22,12 +23,13 @@
         <activity android:name=".onboarding.CreateAccountActivity" />
         <activity android:name=".onboarding.ForgotPassword" />
         <activity android:name=".onboarding.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>>
+
         <activity
             android:name=".home.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
