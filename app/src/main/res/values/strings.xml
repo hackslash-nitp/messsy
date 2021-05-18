@@ -38,9 +38,9 @@
     <string name="email_add">Email Address</string>
     <string name="room_no">Room Number</string>
     <string name="enter_password">Enter a password</string>
-    <string name="create_account" />
-    <string name="already_have_an_account" />
-    <string name="log_in" />
+    <string name="create_account">Create Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
     <string name="edit_your_details">Edit your details</string>
     <string name="save_details">Save Details</string>
     <string name="end_date">End Date</string>
