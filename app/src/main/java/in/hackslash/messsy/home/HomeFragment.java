@@ -1,11 +1,19 @@
 package in.hackslash.messsy.home;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import in.hackslash.messsy.R;
 
@@ -56,10 +64,28 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView=inflater.inflate(R.layout.fragment_home, container, false);
+
+        TextView textView= rootView.findViewById(R.id.name_tv);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid=user.getUid();
+String name;
+        String name1=user.getDisplayName();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String str = sdf.format(new Date());
+        int time=str.charAt(0)+str.charAt(1);
+        if(time>4&&time<12)
+            name="Good Morning";
+        else if(time>=12&&time<16)
+            name="Good Afternoon";
+        else
+            name="Good Evening";
+        textView.setText(name+"Sameer");
+        return rootView;
     }
 }

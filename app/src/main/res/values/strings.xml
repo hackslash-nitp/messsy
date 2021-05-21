@@ -64,6 +64,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="breakfast_image">Breakfast image</string>
+    <string name="logout">logout</string>
 
 
 </resources>

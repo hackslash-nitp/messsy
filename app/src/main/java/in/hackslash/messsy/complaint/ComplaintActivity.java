@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -49,8 +50,8 @@ public class ComplaintActivity extends AppCompatActivity {
 
 
 
-        submit=findViewById(R.id.file_complaint_button);
-        submit=findViewById(R.id.submit_button);
+        submit=findViewById(R.id.file_complaint_button1);
+//        submit=findViewById(R.id.submit_button);
 
 
         mstorageReference= FirebaseStorage.getInstance().getReference().child("images");
@@ -122,11 +123,15 @@ public class ComplaintActivity extends AppCompatActivity {
         String s = String.valueOf(downloadURL);
         String s1=issue.getText().toString();
         String s2=des.getText().toString();
-        Complaint complaint=new Complaint(s1,s2,s);
-        complaintRef.add(complaint);
+if(s==null||s1==null||s2==null) {
+    Complaint complaint = new Complaint(s1, s2, s);
 
-        Toast.makeText(this, "complaint added", Toast.LENGTH_SHORT).show();
+    complaintRef.add(complaint);
 
+    Toast.makeText(this, "complaint added", Toast.LENGTH_SHORT).show();
+}
+else
+    Toast.makeText(this, "enter all the fields", Toast.LENGTH_SHORT).show();
 
     }
 }
