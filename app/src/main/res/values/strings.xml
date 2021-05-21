@@ -34,14 +34,14 @@
     <string name="meals_that_">Meals that you\'ll miss</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="name" >Name</string>
-    <string name="email_add" >Email Address</string>
-    <string name="room_no" >Room Number</string>
-    <string name="enter_password" >Enter a password</string>
-    <string name="create_account" />
-    <string name="already_have_an_account" />
-    <string name="log_in" />
-    <string name="edit_your_details" >Edit your details</string>
+    <string name="name">Name</string>
+    <string name="email_add">Email Address</string>
+    <string name="room_no">Room Number</string>
+    <string name="enter_password">Enter a password</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
+    <string name="edit_your_details">Edit your details</string>
     <string name="save_details">Save Details</string>
     <string name="end_date">End Date</string>
 
@@ -64,6 +64,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="breakfast_image">Breakfast image</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="get_password_reset_link">Get password reset link</string>
+    <string name="last_payment_details">Last Payment Details</string>
+
     <string name="logout">logout</string>
 
 

@@ -2,6 +2,8 @@ package in.hackslash.messsy.onboarding;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,8 +11,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void assignVariables() {
-        // TODO initialize all fields here
+        // initialize all fields here
         email_et = findViewById(R.id.line_1);
         password_et = findViewById(R.id.line_2);
         login = findViewById(R.id.rectangle_1);
@@ -65,15 +70,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void handleForgotPassword() {
-        // TODO Later
         forgot_pass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(LoginActivity.this,ForgotPassword.class));
             }
         });
     }
-
     public void handleLogin() {
 
         //  define onclicklistener on Sign In button to collect data from all edittexts and call AccountUtil.loginUser
@@ -113,7 +116,8 @@ public class LoginActivity extends AppCompatActivity {
                         } else if (status == AccountsUtil.Status.SUCCESS) {
                             //logged in successful
                             progressBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(LoginActivity.this, "login successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "lo" +
+                                    "gin successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intent);
                             finish();

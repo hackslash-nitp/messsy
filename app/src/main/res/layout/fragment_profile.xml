@@ -2,6 +2,7 @@
 
 
 <!-- Here you put the rest of your current view-->
+<!--suppress AndroidUnresolvableTag -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -28,7 +29,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_weight="8"
-            android:gravity="center"
             android:text="@string/profile1"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -38,13 +38,14 @@
         android:id="@+id/profile_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="centerInside"
         android:src="@drawable/undraw_profile_pic" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/xyz"
+        tools:text="@string/xyz"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -52,7 +53,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:layout_marginLeft="40dp"
         android:background="@drawable/undraw_cap"
         android:orientation="vertical">
 
@@ -60,8 +60,8 @@
             android:id="@+id/email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:text="abc@xyz.com"
+            android:layout_gravity="center_horizontal"
+            tools:text="abc@xyz.com"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -69,16 +69,17 @@
             android:id="@+id/Room_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="@string/room_no_339"
+            tools:text="@string/room_no_339"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/edit_profile_btn"
         style="@style/profileStyledBackButton"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:padding="5dp"
         android:text="@string/edit_profile"
@@ -86,6 +87,7 @@
 
 
     <Button
+        android:id="@+id/view_coupon_btn"
         style="@style/profileStyledBackButton"
         android:layout_marginTop="10dp"
         android:gravity="center"

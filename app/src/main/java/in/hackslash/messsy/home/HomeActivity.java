@@ -4,6 +4,7 @@ package in.hackslash.messsy.home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,15 +25,15 @@ import in.hackslash.messsy.AbsenceNotification;
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.complaint.Notice;
 import in.hackslash.messsy.complaint.NoticeActivity;
-import in.hackslash.messsy.onboarding.LoginActivity;
+import in.hackslash.messsy.payment.PaymentDetails;
 import in.hackslash.messsy.vote.Vote;
 import in.hackslash.messsy.vote.VoteActivity;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView bnv;
     private DrawerLayout drawer;
-
     String name="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,18 +99,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.menu_payment:
-                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, PaymentDetails.class));
                 break;
 
             case R.id.menu_change:
                 startActivity(new Intent(HomeActivity.this, VoteActivity.class));
                 break;
 
-            case R.id.logout:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                finish();
-                break;
         }
         return true;
     }

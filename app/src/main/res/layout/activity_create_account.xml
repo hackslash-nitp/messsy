@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.LoginActivity"
+    tools:context=".onboarding.CreateAccountActivity"
     app:layout_constraintStart_toStartOf="parent">
 
 
@@ -17,6 +17,14 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         tools:context=".MainActivity">
+
+        <ProgressBar
+            android:id="@+id/signup_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
 
         <TextView
             android:id="@+id/welcome_to_"
@@ -44,14 +52,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/breakfast_image"
-            android:layout_alignStart="@id/line_1"
+            android:layout_alignStart="@id/name_input"
             android:layout_marginStart="3dp"
             android:layout_marginTop="28dp"
             android:text="@string/name"
             android:textAppearance="@style/name" />
 
         <EditText
-            android:id="@+id/line_1"
+            android:id="@+id/name_input"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/name"
@@ -59,22 +67,22 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/email_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_1"
-            android:layout_alignStart="@id/line_2"
+            android:layout_below="@id/name_input"
+            android:layout_alignStart="@id/email_input"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/email_add"
             android:textAppearance="@style/email_add" />
 
         <EditText
-            android:id="@+id/line_2"
+            android:id="@+id/email_input"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/email_address"
@@ -89,15 +97,15 @@
             android:id="@+id/room_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_2"
-            android:layout_alignStart="@id/line_3"
+            android:layout_below="@id/email_input"
+            android:layout_alignStart="@id/room_no_input"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/room_no"
             android:textAppearance="@style/room_no" />
 
         <EditText
-            android:id="@+id/line_3"
+            android:id="@+id/room_no_input"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/room_no"
@@ -105,22 +113,22 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
+            android:inputType="text|number"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/enter_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/line_3"
-            android:layout_alignStart="@id/line_4"
+            android:layout_below="@id/room_no_input"
+            android:layout_alignStart="@id/password_input"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"
             android:text="@string/enter_password"
             android:textAppearance="@style/enter_password" />
 
         <EditText
-            android:id="@+id/line_4"
+            android:id="@+id/password_input"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/enter_password"
@@ -128,14 +136,14 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="0dp"
             android:backgroundTint="#39374D"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/rectangle_1"
+            android:id="@+id/create_acc"
             android:layout_width="290dp"
             android:layout_height="55dp"
-            android:layout_below="@id/line_4"
+            android:layout_below="@id/password_input"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="40dp"
             android:layout_marginTop="40dp"
@@ -149,10 +157,10 @@
             android:id="@+id/already_have_an_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rectangle_1"
-            android:layout_alignStart="@id/rectangle_1"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/create_acc"
+            android:layout_alignStart="@id/create_acc"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="9dp"
             android:layout_marginBottom="20dp"
             android:text="@string/already_have_an_account"
             android:textAppearance="@style/already_have_an_account" />
@@ -161,9 +169,9 @@
             android:id="@+id/log_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/rectangle_1"
+            android:layout_below="@id/create_acc"
             android:layout_alignBaseline="@id/already_have_an_account"
-            android:layout_alignStart="@id/rectangle_1"
+            android:layout_alignStart="@id/create_acc"
             android:layout_marginStart="212dp"
             android:layout_marginBottom="20dp"
             android:text="@string/log_in"
