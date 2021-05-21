@@ -63,7 +63,7 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
     public void setup() {
-        /* NOT REQUIRED TO THESE BECAUSE TASK DONE IN ALTERNATIVE WAY
+        /* NOT REQUIRED TO THESE STEPS BECAUSE TASK IS DONE IN ALTERNATIVE WAY
         //  define onclicklistener on Save Details button to collect data from all edittexts and call ComplaintsUtil.updateUser
         //  Show an indefinite progress bar on the screen as soon as the submit button is clicked to denote that data is being processed
 

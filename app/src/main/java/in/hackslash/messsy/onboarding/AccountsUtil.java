@@ -20,11 +20,12 @@ import java.util.HashMap;
 public class AccountsUtil {
 
     private onCompleteListener onCompleteListener;
+    FirebaseUser currentUser;
 
     public AccountsUtil createAccount(final User user, String password) {
 
         String email = user.getEmail();
-        final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        currentUser = FirebaseAuth.getInstance().getCurrentUser();
         final FirebaseFirestore firestore = FirebaseFirestore.getInstance();
         //  Check if a user is logged in and return ALREADY_LOGGED_IN if a logged in user is found
         if (currentUser != null) {
@@ -45,6 +46,7 @@ public class AccountsUtil {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 //user account created
+                                currentUser = FirebaseAuth.getInstance().getCurrentUser();
                                 String userid=currentUser.getUid();
                                 String name=user.getName();
                                 String rooomno=user.getRoomno();

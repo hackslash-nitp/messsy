@@ -26,8 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".home.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:name=".home.HomeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
