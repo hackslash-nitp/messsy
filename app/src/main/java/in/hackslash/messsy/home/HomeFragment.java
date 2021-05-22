@@ -49,13 +49,14 @@ public class HomeFragment extends Fragment {
     MealListDataAdapter adapter;
     String descriptiontext;
     ImageView image;
+    TextView name;
     TextView mealDescription;
     TextView mealNext;
     String mealNextType;
     FirebaseFirestore firestore;
     CollectionReference mealsReference;
     ArrayList<MealData> mealList = new ArrayList<>();
-
+    String time = "Good ";
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -69,21 +70,44 @@ public class HomeFragment extends Fragment {
         mealListrecyclerView = item.findViewById(R.id.meals_list);
         mealListrecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
+        name=item.findViewById(R.id.name_tv);
 //        firestore = FirebaseFirestore.getInstance();
         image = item.findViewById(R.id.imageView_meal);
         mealDescription = item.findViewById(R.id.textView_meal);
         mealNext = item.findViewById(R.id.meal_next_button);
         String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         int hours = Integer.parseInt(currentTime.substring(0, 2));
-        final String mealType = (hours > 18 && hours < 24) ? "dinner" : (hours < 18 && hours > 12) ? "lunch" : "breakfast";
+        final String mealType = (hours > 18 && hours < 24||hours<4) ? "dinner" : (hours < 18 && hours > 12) ? "lunch" : "breakfast";
 
-        if (mealType.equals("breakfast")) {
-            mealNextType = "lunch";
-        } else if (mealType.equals("lunch")) {
-            mealNextType = "dinner";
-        } else if (mealType.equals("dinner")) {
-            mealNextType = "breakfast";
+        switch (mealType) {
+            case "breakfast":
+                mealNextType = "lunch";
+                time += "morning";
+                break;
+            case "lunch":
+                mealNextType = "dinner";
+                time+= "afternoon";
+
+                break;
+            case "dinner":
+                mealNextType = "breakfast";
+                time += "evening";
+                break;
         }
+        String uid=FirebaseAuth.getInstance().getUid();
+        FirebaseFirestore.getInstance().collection("users").document(uid).get().
+                addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        time +=" "+documentSnapshot.getString("name");
+                        name.setText(time);
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getContext(), "Something went wrong...", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 //        //dummy data
 //        String url = "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80";
@@ -131,6 +155,7 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 }

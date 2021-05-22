@@ -22,7 +22,7 @@
             android:id="@+id/menu_change"
             android:title="@string/change" />
         <item
-            android:id="@+id/logout"
-            android:title="@string/logout"/>
+            android:id="@+id/logout1"
+            android:title="Logout"/>
     </group>
 </menu>

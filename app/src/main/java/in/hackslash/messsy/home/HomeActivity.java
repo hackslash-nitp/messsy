@@ -1,6 +1,7 @@
 package in.hackslash.messsy.home;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ import in.hackslash.messsy.AbsenceNotification;
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.complaint.Notice;
 import in.hackslash.messsy.complaint.NoticeActivity;
+import in.hackslash.messsy.onboarding.LoginActivity;
 import in.hackslash.messsy.payment.PaymentDetails;
 import in.hackslash.messsy.vote.Vote;
 import in.hackslash.messsy.vote.VoteActivity;
@@ -49,6 +51,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
         bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -65,6 +68,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         break;
                     case R.id.menu_profile:
                         temp = new ProfileFragment();
+                        break;
+
+
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameContainer, temp).commit();
@@ -105,6 +111,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.menu_change:
                 startActivity(new Intent(HomeActivity.this, VoteActivity.class));
+                break;
+
+            case R.id.logout1:
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(HomeActivity.this, "Logged out!!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
                 break;
 
         }
