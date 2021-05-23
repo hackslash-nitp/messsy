@@ -10,15 +10,6 @@
         android:layout_height="wrap_content"
         android:paddingBottom="43dp">
 
-        <ImageView
-            android:id="@+id/arrow_1"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/arrow_1"
-            tools:ignore="ContentDescription" />
-
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="wrap_content"
@@ -39,7 +30,6 @@
             android:id="@+id/complaint_s"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/arrow_1"
             android:layout_marginStart="25dp"
             android:layout_marginTop="30dp"
             android:textSize="28sp"
@@ -130,7 +120,7 @@
             android:textColor="#000"/>
 
         <Button
-            android:id="@+id/file_complaint_button"
+            android:id="@+id/file_complaint_button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/upload_button"
