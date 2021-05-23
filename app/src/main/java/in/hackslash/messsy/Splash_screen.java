@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import in.hackslash.messsy.home.HomeActivity;
+import in.hackslash.messsy.onboarding.LoginActivity;
 
 public class Splash_screen extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class Splash_screen extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.transition);
         iv.startAnimation(anim);
 
-        final Intent i = new Intent(this, HomeActivity.class);
+        final Intent i = new Intent(this, LoginActivity.class);
 
         Thread timer = new Thread(){
             public void run() {
