@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         tools:ignore="GoogleAppIndexingWarning"
         android:theme="@style/AppTheme">
+        <activity android:name=".payment.PaymentDetails"/>
         <activity android:name=".AbsenceNotification"/>
         <activity android:name=".complaint.NoticeActivity" />
         <activity android:name=".complaint.ComplaintActivity"/>
