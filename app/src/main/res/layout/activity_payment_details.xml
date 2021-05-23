@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".complaint.NoticeActivity">
+    tools:context=".payment.PaymentDetails">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="43dp">
+        android:paddingBottom="40dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/arrow_1"
+            android:id="@id/arrow_1"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
@@ -22,7 +24,7 @@
             tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/notice"
+            android:id="@+id/paymentDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/arrow_1"
@@ -30,25 +32,28 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="Notices"
+            android:text="@string/last_payment_details"
             android:textSize="28sp"
             android:textColor="#000"/>
-
         <LinearLayout
             android:layout_width="316dp"
-            android:layout_height="370dp"
-            android:layout_below="@id/notice"
+            android:layout_height="match_parent"
+            android:layout_below="@id/paymentDetails"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="27dp"
             android:background="#FFFFFF"
             android:orientation="vertical"
-            android:padding="19dp">
+            android:padding="5dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_payment_details"/>
         </LinearLayout>
+
     </RelativeLayout>
-</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
