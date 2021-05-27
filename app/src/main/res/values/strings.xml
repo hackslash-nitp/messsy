@@ -66,6 +66,9 @@
     <string name="breakfast_image">Breakfast image</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="get_password_reset_link">Get password reset link</string>
+    <string name="last_payment_details">Last Payment Details</string>
+
+    <string name="logout">logout</string>
 
 
 </resources>
