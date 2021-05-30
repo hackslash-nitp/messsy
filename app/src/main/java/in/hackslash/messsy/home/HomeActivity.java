@@ -134,6 +134,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 finish();
                 break;
 
+            case R.id.scan:
+                startActivity(new Intent(getApplicationContext(),QRScanner.class));
+
+
         }
         return true;
     }
