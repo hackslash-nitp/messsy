@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
     CollectionReference mealsReference;
     ArrayList<MealData> mealList = new ArrayList<>();
     String time = "Good ";
+    static String userName;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -101,6 +102,7 @@ public class HomeFragment extends Fragment {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         time +=" "+documentSnapshot.getString("name");
                         name.setText(time);
+                        userName=documentSnapshot.getString("name");
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override

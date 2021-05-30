@@ -41,11 +41,6 @@ import androidx.fragment.app.Fragment;
 
 import in.hackslash.messsy.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link QRFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class QRFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -102,6 +97,7 @@ public class QRFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView=inflater.inflate(R.layout.fragment_q_r, container, false);
         txt=rootView.findViewById(R.id.nameID);
+        txt.setText(HomeFragment.userName);
         img=rootView.findViewById(R.id.imageViewQR);
         QRstorageReference= FirebaseStorage.getInstance().getReference().child("QRcode");
         gen();
@@ -117,20 +113,11 @@ public class QRFragment extends Fragment {
             Bitmap QRBits = qrgEncoder.getBitmap();
             img.setImageBitmap(QRBits);
 //
-//            Uri uri=getImageUri(getContext(),QRBits);
-            Log.d("abcd","Uri is "+email);
-//            StorageReference photoRef = QRstorageReference.child(uri.getLastPathSegment());
-
-//            photoRef.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    Toast.makeText(getActivity(), "QR uploaded", Toast.LENGTH_SHORT).show();
 //
-//                }
-//            });
 
         }
 
+    }
     }
 //    public Uri getImageUri(Context inContext, Bitmap inImage) {
 //        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
