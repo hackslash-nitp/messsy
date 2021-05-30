@@ -6,10 +6,10 @@
 
     <item android:id="@+id/menu_qrCode"
         android:icon="@drawable/ic_baseline_qr_code_24"
+        android:title="@string/qrcode"/>
 
-        android:title="@string/qrcode"
-        />
-
+    <item android:id="@+id/placeholder"
+        android:title="" />
 
     <item android:id="@+id/menu_complaint"
         android:icon="@drawable/ic_baseline_list_alt_24"
