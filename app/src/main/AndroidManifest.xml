@@ -16,8 +16,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".home.QRScanner"></activity>
-        <activity android:name=".AbsenceNotification" />
         <activity android:name=".payment.PaymentDetails" />
+        <activity android:name=".AbsenceNotification" />
         <activity android:name=".complaint.NoticeActivity" />
         <activity android:name=".complaint.ComplaintActivity" />
         <activity android:name=".vote.VoteActivity" />
