@@ -2,8 +2,8 @@
     <string name="app_name">Messsy</string>
     <string name="welcome_to_">Welcome to messsy!</string>
     <string name="email">Email</string>
-    <string name="Password">password</string>
-    <string name="sign_in">Sign in</string>
+    <string name="Password">Password</string>
+    <string name="sign_in">SignIn</string>
     <string name="forgot_pass">Forgot Password?</string>
     <string name="create_acco">Create Account</string>
 
@@ -40,17 +40,17 @@
     <string name="enter_password">Enter a password</string>
     <string name="create_account">Create Account</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="log_in">Log in</string>
+    <string name="log_in">Login</string>
     <string name="edit_your_details">Edit your details</string>
     <string name="save_details">Save Details</string>
     <string name="end_date">End Date</string>
 
-    <string name="home">home</string>
-    <string name="qrcode">qrcode</string>
-    <string name="profile">profile</string>
+    <string name="home">Home</string>
+    <string name="qrcode">QRcode</string>
+    <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="view_coupan">View Coupan</string>
+    <string name="view_coupan">View Coupon</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="xyz">XYZ</string>
     <string name="room_no_339">Room No. 339</string>
@@ -68,7 +68,7 @@
     <string name="get_password_reset_link">Get password reset link</string>
     <string name="last_payment_details">Last Payment Details</string>
 
-    <string name="logout">logout</string>
+    <string name="logout">Logout</string>
 
 
 </resources>
