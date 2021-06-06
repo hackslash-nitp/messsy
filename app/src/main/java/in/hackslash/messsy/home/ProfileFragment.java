@@ -36,6 +36,7 @@ import java.net.URL;
 
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.onboarding.EditProfileActivity;
+import in.hackslash.messsy.payment.Balance;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -161,7 +162,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 startActivity(new Intent(getActivity(), EditProfileActivity.class));
                 break;
             case R.id.view_coupon_btn:
-                Toast.makeText(getActivity(), "Not Available Right Now", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), Balance.class));
                 break;
             default:
                 break;

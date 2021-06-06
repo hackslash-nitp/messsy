@@ -69,6 +69,8 @@
     <string name="last_payment_details">Last Payment Details</string>
 
     <string name="logout">Logout</string>
+    <string name="your_balance">Your Balance:</string>
+    <string name="balance">Balance</string>
 
 
 </resources>

@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".home.QRScanner"></activity>
+        <activity android:name=".payment.Balance"></activity>
+        <activity android:name=".home.QRScanner" />
         <activity android:name=".payment.PaymentDetails" />
         <activity android:name=".AbsenceNotification" />
         <activity android:name=".complaint.NoticeActivity" />
