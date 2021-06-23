@@ -73,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:fabCradleMargin="8dp"
+                android:backgroundTint="@color/main_colour"
                 app:fabCradleRoundedCornerRadius="20dp"
                 android:layout_gravity="bottom">
 
@@ -93,7 +94,7 @@
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_add"
+                android:src="@drawable/scan"
                 app:layout_anchor="@id/bottomAppBar" />
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
