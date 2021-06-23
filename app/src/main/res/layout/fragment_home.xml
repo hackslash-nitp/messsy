@@ -10,28 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Good morning Priyanshu!"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-medium"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:textStyle="bold"
-        android:textSize="20sp" />
-    <TextView
-        android:id="@+id/meals_tv"
-        android:layout_below="@id/name_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upcoming Meals"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="16dp"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good morning Priyanshu!"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/meals_tv"
+            android:layout_below="@id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Meals"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/txt"
@@ -50,7 +50,9 @@
             android:scrollbars="horizontal"
             android:layout_marginVertical="5dp"
             android:background="#6A373549"
-            android:layout_below="@id/meals_tv" />
+            android:layout_below="@id/meals_tv" >
+
+        </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
             android:id="@+id/meal_next_button"
@@ -66,6 +68,15 @@
             android:textAlignment="center"
             android:text="Next"
             android:textColor="#fff" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meals_list"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            />
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -93,14 +104,13 @@
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
                     android:src="@drawable/food_img" />
-                <!--            android:background="@drawable/curved_rectangle"-->
 
                 <TextView
                     android:id="@+id/delight_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_below="@id/food_img"
                     android:layout_marginStart="22dp"
                     android:text="Today's Delight."
@@ -120,7 +130,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/food_intro_tv"
+                    android:id="@+id/food_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/food_name_tv"
@@ -132,11 +142,11 @@
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/text"
-        android:layout_alignParentBottom="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
+    </RelativeLayout>
 </FrameLayout>

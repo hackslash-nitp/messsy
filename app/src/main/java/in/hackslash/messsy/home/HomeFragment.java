@@ -6,8 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +32,13 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,22 +47,21 @@ import in.hackslash.messsy.R;
 import in.hackslash.messsy.home.home.MealData;
 import in.hackslash.messsy.home.home.MealListDataAdapter;
 
+public class HomeFragment extends Fragment{
+    private static final String TAG = "HomeFrag";
 
-public class HomeFragment extends Fragment {
+    public static String userName;
+    private RecyclerView mealListrecyclerView;
+    private MealListDataAdapter adapter;
+    private ImageView image, foodimg;
+    private TextView name, mealDescription ,mealNext, foodnametv, fooddesctv;
+    private FirebaseFirestore firestore;
+    private CollectionReference mealsReference;
+    private final ArrayList<MealData> mealList = new ArrayList<>();
+    private String descriptiontext, mealNextType, mealSelect,time = "Good ";
+    String mealTimeArray[] = {"Select meal type","breakfast", "lunch", "dinner"};
+    Spinner mealSpinner;
 
-    RecyclerView mealListrecyclerView;
-    MealListDataAdapter adapter;
-    String descriptiontext;
-    ImageView image;
-    TextView name;
-    TextView mealDescription;
-    TextView mealNext;
-    String mealNextType;
-    FirebaseFirestore firestore;
-    CollectionReference mealsReference;
-    ArrayList<MealData> mealList = new ArrayList<>();
-    String time = "Good ";
-    static String userName;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -72,13 +76,18 @@ public class HomeFragment extends Fragment {
         mealListrecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         name=item.findViewById(R.id.name_tv);
-//        firestore = FirebaseFirestore.getInstance();
         image = item.findViewById(R.id.imageView_meal);
-        mealDescription = item.findViewById(R.id.textView_meal);
         mealNext = item.findViewById(R.id.meal_next_button);
+        mealSpinner = item.findViewById(R.id.spinner);
+
+        foodnametv = item.findViewById(R.id.food_name_tv);
+        fooddesctv = item.findViewById(R.id.food_description);
+        foodimg = item.findViewById(R.id.food_img);
+
         String currentTime = new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
         int hours = Integer.parseInt(currentTime.substring(0, 2));
-        final String mealType = (hours > 18 && hours < 24||hours<4) ? "dinner" : (hours < 18 && hours > 12) ? "lunch" : "breakfast";
+        final String mealType = (hours > 18 && hours < 24 || hours < 4) ? "dinner" : (hours < 18 && hours > 12) ? "lunch" : "breakfast";
+        final String day = currentDay();
 
         switch (mealType) {
             case "breakfast":
@@ -87,15 +96,16 @@ public class HomeFragment extends Fragment {
                 break;
             case "lunch":
                 mealNextType = "dinner";
-                time+= "afternoon";
+                time += "afternoon";
 
                 break;
             case "dinner":
-                mealNextType = "breakfast";
+                mealNextType = "lunch";
                 time += "evening";
                 break;
         }
-        String uid=FirebaseAuth.getInstance().getUid();
+
+        String uid = FirebaseAuth.getInstance().getUid();
         FirebaseFirestore.getInstance().collection("users").document(uid).get().
                 addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
@@ -111,40 +121,44 @@ public class HomeFragment extends Fragment {
             }
         });
 
-//        //dummy data
-//        String url = "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=653&q=80";
-//        descriptiontext = "Meal";
-//        mealList.add(new MealData(descriptiontext,url));
-//        adapter = new MealListDataAdapter(getContext(),mealList);
-//        mealListrecyclerView.setAdapter(adapter);
 
         mealNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), mealNextType, Toast.LENGTH_SHORT).show();
-                mealList.clear();
-                fetchMealData(mealNextType);
+                fetchMealData(mealNextType,day);
             }
         });
-
-        fetchMealData(mealType);
+        adapter = new MealListDataAdapter(getContext(), mealList);
+        mealListrecyclerView.setAdapter(adapter);
+        fetchMealData(mealType, day);
+        setupMealSpinner(mealSpinner);
         return item;
     }
 
-    private void fetchMealData(String meal) {
+    private String currentDay(){
+        Calendar calendar = Calendar.getInstance();
+        Date date = calendar.getTime();
 
+        String day = new SimpleDateFormat("EEEE", Locale.ENGLISH).format(date.getTime());
+        return day;
+    }
+    private void fetchMealData(String meal, String day) {
+
+        mealList.clear();
         firestore = FirebaseFirestore.getInstance();
         firestore.collection("MealListData")
-                .document("Hyoa6CRWu7F2s5ljhbYb").collection(meal).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                .document("Sunday").collection(meal).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots) {
                     {
                         MealData mealData = snapshot.toObject(MealData.class);
                         if (snapshot.exists()) {
+                            String mealname = mealData.getName();
                             String description = mealData.getDescription();
                             String imageUrl = mealData.getImageUrl();
-                            mealList.add(new MealData(imageUrl, description));
+                            mealList.add(new MealData(imageUrl, description, mealname));
                         }
                     }
                 }
@@ -152,12 +166,40 @@ public class HomeFragment extends Fragment {
                 mealListrecyclerView.setAdapter(adapter);
             }
         }).addOnFailureListener(new OnFailureListener() {
+
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getActivity(), "Something went wrong", Toast.LENGTH_SHORT).show();
             }
         });
 
+    }
 
+//    @Override
+//    public void onItemClicked(int position) {
+//        Log.d(TAG, "Clicked"+position);
+//        foodnametv.setText(mealList.get(position).getName());
+//        fooddesctv.setText(mealList.get(position).getDescription());
+//        Picasso.with(getContext()).load(mealList.get(position).getImageUrl()).into(foodimg);
+//    }
+    private void setupMealSpinner(Spinner mealSpinner) {
+        ArrayAdapter<String> mealSpinnerAdapter=new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, mealTimeArray);
+        mealSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mealSpinner.setAdapter(mealSpinnerAdapter);
+        mealSpinner.setOnItemSelectedListener(new MealSpinner());
+    }
+
+    private class MealSpinner implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+            mealSelect= mealTimeArray[i];
+            String day = currentDay();
+            fetchMealData(mealSelect,day);
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> adapterView) {
+
+        }
     }
 }
