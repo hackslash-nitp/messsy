@@ -72,5 +72,12 @@
     <string name="your_balance">Your Balance:</string>
     <string name="balance">Balance</string>
 
+    <string name="first_slide_title">Fooding Made Easier</string>
+    <string name="second_slide_title">Personalized Experience</string>
+    <string name="third_slide_title">Be Informed</string>
+    <string name="first_slide_desc">Access NITPs mess bill, suggestion, items, latest information and more...</string>
+    <string name="second_slide_desc">Unified platform for payment of messs bills, reporting absence and reporting faults.... </string>
+    <string name="third_slide_desc">Get info about the changes in the menu and give feedback of the meals provided.</string>
+
 
 </resources>
