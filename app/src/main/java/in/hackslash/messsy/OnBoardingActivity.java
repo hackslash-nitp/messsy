@@ -54,6 +54,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     public void skip(View view) {
         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         fileList();
+        finish();
     }
 
     private void addDots(int position){
