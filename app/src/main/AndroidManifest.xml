@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".payment.Balance"></activity>
+        <activity android:name=".OnBoardingActivity"></activity>
+        <activity android:name=".payment.Balance" />
         <activity android:name=".home.QRScanner" />
         <activity android:name=".payment.PaymentDetails" />
         <activity android:name=".AbsenceNotification" />
