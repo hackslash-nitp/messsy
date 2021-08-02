@@ -125,7 +125,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                                 .error(R.mipmap.ic_launcher)
                                 .apply(RequestOptions.circleCropTransform())
                                 .into(profileImage);
-                    }else Toast.makeText(getActivity(),"Profile Pic Not Found",Toast.LENGTH_LONG).show();
+                    }else {
+                        profileImage.setImageDrawable(getActivity().getDrawable(R.drawable.undraw_profile_pic));
+                        Toast.makeText(getActivity(),"Profile Pic Not Found",Toast.LENGTH_LONG).show();
+                    }
                     uName = documentSnapshot.contains("name") ? documentSnapshot.get("name").toString(): "NOT FOUND";
                     uEmail = documentSnapshot.contains("email") ? documentSnapshot.get("email").toString() : "NOT FOUND" ;
                     uRoomNo =  "Room No. " + (documentSnapshot.contains("roomno") ? documentSnapshot.get("roomno").toString() : "NOT FOUND");
