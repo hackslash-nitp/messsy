@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import in.hackslash.messsy.R;
 
-public class Balance extends AppCompatActivity {
+public class BalanceActivity extends AppCompatActivity {
     private TextView curBalance;
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final FirebaseUser currUser  = FirebaseAuth.getInstance().getCurrentUser();;

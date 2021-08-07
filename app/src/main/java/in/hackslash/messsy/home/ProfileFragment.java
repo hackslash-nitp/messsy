@@ -1,8 +1,6 @@
 package in.hackslash.messsy.home;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,20 +21,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.squareup.picasso.Picasso;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.onboarding.EditProfileActivity;
-import in.hackslash.messsy.payment.Balance;
+import in.hackslash.messsy.payment.BalanceActivity;
 
 
 public class ProfileFragment extends Fragment implements View.OnClickListener{
@@ -128,7 +120,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 startActivity(new Intent(getActivity(), EditProfileActivity.class));
                 break;
             case R.id.view_coupon_btn:
-                startActivity(new Intent(getActivity(), Balance.class));
+                startActivity(new Intent(getActivity(), BalanceActivity.class));
                 break;
             default:
                 break;

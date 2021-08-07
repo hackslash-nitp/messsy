@@ -22,6 +22,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import in.hackslash.messsy.R;
+import in.hackslash.messsy.payment.PaymentMenuActivity;
 
 public class QRScanner extends AppCompatActivity {
 
@@ -48,6 +49,8 @@ public class QRScanner extends AppCompatActivity {
                         String res=result.getText();
                         if(res.equals(code))
                         {
+                            startActivity(new Intent(QRScanner.this, PaymentMenuActivity.class));
+                            finish();
                             Toast.makeText(QRScanner.this, "Success", Toast.LENGTH_SHORT).show();
                         }
                         else

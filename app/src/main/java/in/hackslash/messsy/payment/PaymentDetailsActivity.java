@@ -27,7 +27,7 @@ import java.util.*;
 import in.hackslash.messsy.R;
 import in.hackslash.messsy.home.HomeActivity;
 
-public class PaymentDetails extends AppCompatActivity{
+public class PaymentDetailsActivity extends AppCompatActivity{
     private static final String TAG = "PaymentDetails";
     private ImageView arrow;
     private FirebaseUser currUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -70,7 +70,7 @@ public class PaymentDetails extends AppCompatActivity{
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PaymentDetails.this, HomeActivity.class));
+                startActivity(new Intent(PaymentDetailsActivity.this, HomeActivity.class));
                 finish();
             }
         });
