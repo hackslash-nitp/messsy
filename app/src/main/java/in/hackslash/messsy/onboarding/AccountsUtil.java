@@ -55,6 +55,7 @@ public class AccountsUtil {
                                 map.put("name",name);
                                 map.put("roomno",rooomno);
                                 map.put("email",email);
+                                map.put("balance",2000);
                                 firestore.collection("users").document(userid)
                                         .set(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
@@ -216,10 +217,7 @@ public class AccountsUtil {
                             DocumentSnapshot doc=task.getResult();
                             if(doc.exists()){
                                 //user exist
-                                String name=doc.getString("name");
-                                String roomno=doc.getString("roomno");
-                                String email=doc.getString("email");
-                                User user=new User(email,name,roomno,userID);
+                                User user=doc.toObject(User.class);
                                 onCompleteListener.onComplete(Status.SUCCESS,user);
                             }
                             else{
@@ -229,8 +227,6 @@ public class AccountsUtil {
                         }
                     }
                 });
-
-        // Leave as it is
         return this;
     }
 

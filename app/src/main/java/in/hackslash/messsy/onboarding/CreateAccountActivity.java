@@ -101,6 +101,8 @@ public class CreateAccountActivity extends AppCompatActivity {
                 user.setName(name);
                 user.setEmail(email);
                 user.setRoomno(roomno);
+                user.setBalance(3000);
+
 
 
                 accountsUtil.createAccount(user, password).setOnCompleteListener(new AccountsUtil.onCompleteListener() {

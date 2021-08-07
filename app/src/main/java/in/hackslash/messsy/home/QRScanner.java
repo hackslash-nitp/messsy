@@ -28,6 +28,7 @@ public class QRScanner extends AppCompatActivity {
     CodeScanner codeScanner;
     CodeScannerView codeScannerView;
     TextView resultdata;
+    private String code="messsy";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +45,15 @@ public class QRScanner extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        resultdata.setText(result.getText());
+                        String res=result.getText();
+                        if(res.equals(code))
+                        {
+                            Toast.makeText(QRScanner.this, "Success", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            Toast.makeText(QRScanner.this, "Failed", Toast.LENGTH_SHORT).show();
+                        }
 
                     }
                 });

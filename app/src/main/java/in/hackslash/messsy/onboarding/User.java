@@ -4,16 +4,27 @@ public class User {
 
     // TODO add user fields here
     private String email,name,roomno,uid;
+    private int balance;
+
 
     public User(){
 
     }
 
-    public User(String email, String name, String roomno,String uid) {
+    public User(String email, String name, String roomno,String uid,int balance) {
         this.email = email;
         this.name = name;
         this.roomno = roomno;
         this.uid=uid;
+        this.balance=balance;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
     }
 
     public String getEmail() {

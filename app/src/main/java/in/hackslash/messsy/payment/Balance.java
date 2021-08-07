@@ -25,7 +25,7 @@ public class Balance extends AppCompatActivity {
     private final FirebaseUser currUser  = FirebaseAuth.getInstance().getCurrentUser();;
     private final String user_id = currUser.getUid();
     private final DocumentReference balRef =  db.collection("users")
-            .document(user_id).collection("Payment").document("Balance");
+            .document(user_id);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
