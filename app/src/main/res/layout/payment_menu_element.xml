@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/element_img"
+        android:src="@drawable/scan"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/element_title"
+        android:text="Title"
+        android:layout_toEndOf="@id/element_img"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/element_price"
+        android:text="Price: 00"
+        android:layout_toEndOf="@id/element_img"
+        android:textSize="20sp"
+        android:layout_below="@id/element_title"
+        android:textColor="@color/main_colour"
+        />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="-"
+        android:id="@+id/element_minus"
+        android:layout_toStartOf="@id/element_quantity"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:id="@+id/element_quantity"
+        android:layout_toStartOf="@id/element_plus"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        />
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/element_plus"
+        />
+
+
+</RelativeLayout>

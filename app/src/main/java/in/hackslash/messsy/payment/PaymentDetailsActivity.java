@@ -1,23 +1,15 @@
 package in.hackslash.messsy.payment;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.icu.util.DateInterval;
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
-import android.util.Pair;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,8 +17,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -35,10 +25,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.*;
 
 import in.hackslash.messsy.R;
-import in.hackslash.messsy.complaint.NoticeActivity;
 import in.hackslash.messsy.home.HomeActivity;
 
-public class PaymentDetails extends AppCompatActivity{
+public class PaymentDetailsActivity extends AppCompatActivity{
     private static final String TAG = "PaymentDetails";
     private ImageView arrow;
     private FirebaseUser currUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -67,7 +56,7 @@ public class PaymentDetails extends AppCompatActivity{
                 for(QueryDocumentSnapshot queryDocumentSnapshot : queryDocumentSnapshots) {
                     paymentList.add(queryDocumentSnapshot.getData());
                 }
-                recyclerView.setAdapter(new PaymentAdapter(paymentList));
+                recyclerView.setAdapter(new PaymentHistoryAdapter(paymentList));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -81,7 +70,7 @@ public class PaymentDetails extends AppCompatActivity{
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PaymentDetails.this, HomeActivity.class));
+                startActivity(new Intent(PaymentDetailsActivity.this, HomeActivity.class));
                 finish();
             }
         });

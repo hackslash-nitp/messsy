@@ -15,10 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".OnBoardingActivity"></activity>
-        <activity android:name=".payment.Balance" />
+        <activity android:name=".payment.FinalPaymentActivity"></activity>
+        <activity android:name=".payment.PaymentMenuActivity" />
+        <activity android:name=".OnBoardingActivity" />
+        <activity android:name=".payment.BalanceActivity" />
         <activity android:name=".home.QRScanner" />
-        <activity android:name=".payment.PaymentDetails" />
+        <activity android:name=".payment.PaymentDetailsActivity" />
         <activity android:name=".AbsenceNotification" />
         <activity android:name=".complaint.NoticeActivity" />
         <activity android:name=".complaint.ComplaintActivity" />

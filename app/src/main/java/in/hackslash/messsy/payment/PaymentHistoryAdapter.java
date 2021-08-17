@@ -1,13 +1,9 @@
 package in.hackslash.messsy.payment;
 
-import android.app.Activity;
-import android.util.Log;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,15 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.Timestamp;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Map;
 
 import in.hackslash.messsy.R;
 
-public class PaymentAdapter extends RecyclerView.Adapter<PaymentAdapter.ViewHolder> {
+public class PaymentHistoryAdapter extends RecyclerView.Adapter<PaymentHistoryAdapter.ViewHolder> {
 
     final ArrayList<Map<String,Object>> paymentList;
-    public PaymentAdapter(ArrayList<Map<String,Object>> paymentList) {
+    public PaymentHistoryAdapter(ArrayList<Map<String,Object>> paymentList) {
         this.paymentList = paymentList;
         notifyDataSetChanged();
     }

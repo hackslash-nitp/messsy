@@ -159,7 +159,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     return;
                 }
 
-                final User user = new User(email,name,roomNo,password);
+                final User user = new User(email,name,roomNo,password,3000);
 
                 if(currUser != null) {
                     final String user_id = currUser.getUid();

@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -22,15 +20,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import in.hackslash.messsy.AbsenceNotification;
 import in.hackslash.messsy.R;
-import in.hackslash.messsy.complaint.Notice;
 import in.hackslash.messsy.complaint.NoticeActivity;
 import in.hackslash.messsy.onboarding.LoginActivity;
-import in.hackslash.messsy.payment.PaymentDetails;
-import in.hackslash.messsy.vote.Vote;
+import in.hackslash.messsy.payment.PaymentDetailsActivity;
 import in.hackslash.messsy.vote.VoteActivity;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -120,7 +115,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.menu_payment:
 //                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, PaymentDetails.class));
+                startActivity(new Intent(this, PaymentDetailsActivity.class));
                 break;
 
             case R.id.menu_change:
