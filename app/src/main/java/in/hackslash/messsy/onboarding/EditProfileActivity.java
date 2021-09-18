@@ -51,6 +51,7 @@ public class EditProfileActivity extends AppCompatActivity {
     public static final int IMAGE_CODE = 1;
     private static final String TAG = "EditProfileActivity";
     private EditText editTextName;
+    private EditText editTextRoll;
     private EditText editTextEmail;
     private EditText editTextRoomNo;
     private EditText editTextPassword;
@@ -76,6 +77,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     public void assignVariables() {
         editTextName = findViewById(R.id.name);
+        editTextRoll = findViewById(R.id.roll);
         editTextEmail = findViewById(R.id.email);
         editTextRoomNo = findViewById(R.id.room_no);
         editTextPassword = findViewById(R.id.password);
@@ -142,11 +144,12 @@ public class EditProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
                 final String name = editTextName.getText().toString();
+                final String roll = editTextRoll.getText().toString();
                 final String email = editTextEmail.getText().toString();
                 final String roomNo = editTextRoomNo.getText().toString();
                 final String password = editTextPassword.getText().toString();
 
-                if(name.length() == 0 || roomNo.length() == 0 || email.length()==0){
+                if(name.length() == 0 || roomNo.length() == 0 || email.length()==0 || roll.length()==0){
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(EditProfileActivity.this, "Empty Fields", Toast.LENGTH_SHORT).show();
                     Log.d(TAG,"NOTHING CHANGED");
@@ -159,7 +162,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     return;
                 }
 
-                final User user = new User(email,name,roomNo,password,3000);
+                final User user = new User(email,name,roomNo,password,3000,roll);
 
                 if(currUser != null) {
                     final String user_id = currUser.getUid();

@@ -98,11 +98,35 @@
                     android:textColor="#000000"
                     android:autofillHints="" />
 
+        <TextView
+            android:id="@+id/roll_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignStart="@id/email"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="Roll Number"
+            android:textAppearance="@style/email" />
+
+        <EditText
+            android:id="@+id/roll"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roll_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:autofillHints="" />
+
                 <TextView
                     android:id="@+id/email_address_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/name"
+                    android:layout_below="@id/roll"
                     android:layout_alignStart="@id/email"
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="0dp"

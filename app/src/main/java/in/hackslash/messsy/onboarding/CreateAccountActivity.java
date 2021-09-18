@@ -18,6 +18,7 @@ import in.hackslash.messsy.home.HomeActivity;
 public class CreateAccountActivity extends AppCompatActivity {
     // Declare instances for all UI elements
     private EditText name_ct, email_ct, room_no_ct, password_ct;
+    private EditText roll_ct;
     private Button create_acc;
     private TextView log_in;
     private AccountsUtil accountsUtil;
@@ -37,6 +38,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         // initialize all fields here
         name_ct = findViewById(R.id.name_input);
         email_ct = findViewById(R.id.email_input);
+        roll_ct = findViewById(R.id.input_roll);
         room_no_ct = findViewById(R.id.room_no_input);
         password_ct = findViewById(R.id.password_input);
         create_acc = findViewById(R.id.create_acc);
@@ -79,6 +81,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                 String email = email_ct.getText().toString();
                 String roomno = room_no_ct.getText().toString();
                 String password = password_ct.getText().toString();
+                String roll = roll_ct.getText().toString();
                 progressBar.setVisibility(View.VISIBLE);
 
                 if(TextUtils.isEmpty(email)){
@@ -97,11 +100,16 @@ public class CreateAccountActivity extends AppCompatActivity {
                     name_ct.setError("Name is required");
                     return;
                 }
+                if(TextUtils.isEmpty(roll)){
+                    name_ct.setError("Roll Number is required");
+                    return;
+                }
                 User user = new User();
                 user.setName(name);
                 user.setEmail(email);
                 user.setRoomno(roomno);
                 user.setBalance(3000);
+                user.setRoll(roll);
 
 
 
