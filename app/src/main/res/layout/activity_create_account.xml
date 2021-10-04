@@ -71,10 +71,33 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/email_address"
+            android:id="@+id/enter_roll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/name_input"
+            android:layout_alignStart="@id/password_input"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:text="Roll Number"
+            android:textAppearance="@style/enter_password" />
+
+        <EditText
+            android:id="@+id/input_roll"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enter_roll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#39374D"
+            android:inputType="number"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_roll"
             android:layout_alignStart="@id/email_input"
             android:layout_marginStart="3dp"
             android:layout_marginTop="0dp"

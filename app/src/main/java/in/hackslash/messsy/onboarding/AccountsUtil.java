@@ -49,10 +49,12 @@ public class AccountsUtil {
                                 currentUser = FirebaseAuth.getInstance().getCurrentUser();
                                 String userid=currentUser.getUid();
                                 String name=user.getName();
+                                String roll = user.getRoll();
                                 String rooomno=user.getRoomno();
                                 String email=user.getEmail();
                                 HashMap<String,Object> map=new HashMap<>();
                                 map.put("name",name);
+                                map.put("roll",roll);
                                 map.put("roomno",rooomno);
                                 map.put("email",email);
                                 map.put("balance",2000);
@@ -154,6 +156,7 @@ public class AccountsUtil {
                             if(doc.exists()){
                                 //user exist
                                 String name_n=user.getName();
+                                String roll_n=user.getRoll();
                                 String roomno_n=user.getRoomno();
                                 String email_n=user.getEmail();
                                 String name_old=doc.getString("name");
@@ -168,6 +171,7 @@ public class AccountsUtil {
                                 else{
                                     HashMap<String,Object> map=new HashMap<>();
                                     map.put("name",name_n);
+                                    map.put("roll",roll_n);
                                     map.put("roomno",roomno_n);
                                     firestore.collection("users").document(user_id).update(map);
                                     // if new email provided then updating it

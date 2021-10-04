@@ -3,7 +3,7 @@ package in.hackslash.messsy.onboarding;
 public class User {
 
     // TODO add user fields here
-    private String email,name,roomno,uid;
+    private String email,name,roomno,uid,roll;
     private int balance;
 
 
@@ -11,12 +11,13 @@ public class User {
 
     }
 
-    public User(String email, String name, String roomno,String uid,int balance) {
+    public User(String email, String name, String roomno, String uid, int balance, String roll) {
         this.email = email;
         this.name = name;
         this.roomno = roomno;
         this.uid=uid;
         this.balance=balance;
+        this.roll = roll;
     }
 
     public int getBalance() {
@@ -57,5 +58,13 @@ public class User {
 
     public void setUid(String uid) {
         this.uid = uid;
+    }
+
+    public String getRoll() {
+        return roll;
+    }
+
+    public void setRoll(String roll) {
+        this.roll = roll;
     }
 }

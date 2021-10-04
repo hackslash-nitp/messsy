@@ -6,10 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AbsenceNotification">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,7 +48,8 @@
             <EditText
                 android:id="@+id/start_date_input"
                 android:layout_width="match_parent"
-                android:inputType="date"
+                android:inputType="text"
+                android:hint="4 Sep 2021"
                 android:textColor="#000000"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#39374D"
@@ -77,7 +74,8 @@
             <EditText
                 android:id="@+id/end_date_input"
                 android:layout_width="match_parent"
-                android:inputType="date"
+                android:inputType="text"
+                android:hint="7 Sep 2021"
                 android:textColor="#000000"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#39374D"
@@ -87,59 +85,6 @@
                 android:layout_marginEnd="25dp"
                 android:layout_marginStart="25dp"/>
 
-            <TextView
-                android:id="@+id/meals_that_"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/meals_that_"
-                android:textAppearance="@style/meals_that_"
-                app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/josefin_sans_semibold"
-                app:layout_constraintTop_toBottomOf="@id/end_date_input"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"/>
-
-            <RadioGroup
-                android:id="@+id/radio_buttom_group_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/meals_that_"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="19dp">
-
-                <RadioButton
-                    android:id="@+id/breakfast_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/radio_button_selector"
-                    android:fontFamily="@font/josefin_sans_semibold"
-                    android:padding="5dp"
-                    android:text="@string/breakfast"
-                    android:textAppearance="@style/breakfast" />
-
-                <RadioButton
-                    android:id="@+id/lunch_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:button="@drawable/radio_button_selector"
-                    android:fontFamily="@font/josefin_sans_semibold"
-                    android:padding="8dp"
-                    android:text="@string/lunch"
-                    android:textAppearance="@style/lunch" />
-
-                <RadioButton
-                    android:id="@+id/dinner_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:button="@drawable/radio_button_selector"
-                    android:fontFamily="@font/josefin_sans_semibold"
-                    android:padding="8dp"
-                    android:text="@string/dinner"
-                    android:textAppearance="@style/dinner" />
-            </RadioGroup>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -149,7 +94,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="25dp"
-                app:layout_constraintTop_toBottomOf="@id/radio_buttom_group_a"
+                app:layout_constraintTop_toBottomOf="@id/end_date_input"
                 android:orientation="horizontal"
                 android:weightSum="2">
                 <Button
@@ -177,6 +122,6 @@
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
 </RelativeLayout>
 
