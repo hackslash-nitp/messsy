@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageIcon"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/ganga_hostel_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/hostelMessName"
+                android:layout_marginTop="14dp"
+                android:textColor="#3F3F3F"
+                android:textSize="17sp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:layout_marginRight="22dp"
+                android:layout_toRightOf="@id/imageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ganga Hostel Mess" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textFontWeight="500"
+                android:layout_marginTop="14dp"
+                android:textSize="15sp"
+                android:layout_marginRight="10dp"
+                android:textColor="#404040"
+                android:text="12-06-2021" />
+
+            <View
+                android:id="@+id/lineGanga"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/imageIcon"
+                android:background="#D7D7D7"/>
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineGanga"
+                android:layout_marginTop="10dp"
+                android:textColor="#4D4D4D"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Subject" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subject"
+                android:layout_marginTop="10dp"
+                android:textColor="#4D4D4D"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textFontWeight="500"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="To all the students of Arya Mess :
+Let me set the scene: your friend John is rushing to get his daughter from school and his son to the soccer field, and he still needs to stop at the grocery store because there’s nothing in the fridge. In the midst of this everyday madness, he gets a text message from Google with a verification code. He thinks, “That’s weird. Maybe I should log in to my email and see what’s going on.”" />
+
+
+            <TextView
+                android:id="@+id/timeDisplay"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/description"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="7dp"
+                android:textFontWeight="500"
+                android:layout_width="wrap_content"
+                android:textColor="#8A8A8A"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:layout_height="wrap_content"
+                android:text="02:30 PM" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
