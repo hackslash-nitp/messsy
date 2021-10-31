@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".complaint.NoticeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:paddingBottom="43dp">
 
         <ImageView
@@ -35,13 +36,12 @@
             android:textColor="#000"/>
 
         <LinearLayout
-            android:layout_width="316dp"
-            android:layout_height="370dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/notice"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="27dp"
-            android:background="#FFFFFF"
             android:orientation="vertical"
             android:padding="19dp">
 
@@ -51,4 +51,4 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </RelativeLayout>
-</ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
