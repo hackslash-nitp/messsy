@@ -55,7 +55,8 @@
                 android:button="@drawable/radio_button_selector"
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:padding="8dp"
-                android:text="Breakfast"/>
+                android:text="Breakfast"
+                android:checked="true"/>
             <RadioButton
                 android:id="@+id/lunch"
                 android:layout_width="wrap_content"
