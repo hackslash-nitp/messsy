@@ -2,6 +2,7 @@ package in.hackslash.messsy.home;
 
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -40,10 +41,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
 
         bnv = findViewById(R.id.btm_nav);
-        fab = findViewById(R.id.fab);
+//        fab = findViewById(R.id.fab);
 
         bnv.setBackground(null);
-        bnv.getMenu().getItem(2).setEnabled(false);
+//        bnv.getMenu().getItem(2).setEnabled(false);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.frameContainer, new HomeFragment()).commit();
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -63,9 +64,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     case R.id.menu_home:
                         temp = new HomeFragment();
                         break;
-                    case R.id.menu_qrCode:
-                        temp = new QRFragment();
-                        break;
                     case R.id.menu_complaint:
                         temp = new ComplaintFragment();
                         break;
@@ -73,7 +71,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         temp = new ProfileFragment();
                         break;
 
-
+//                    case R.id.menu_qrCode:
+//                        temp = new QRFragment();
+//                        break;
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frameContainer, temp).commit();
@@ -81,12 +81,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this,QRScanner.class));
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(HomeActivity.this,QRScanner.class));
+//            }
+//        });
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -113,10 +113,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(HomeActivity.this, NoticeActivity.class));
                 break;
 
-            case R.id.menu_payment:
+//            case R.id.menu_payment:
 //                Toast.makeText(this, "payement done", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, PaymentDetailsActivity.class));
-                break;
+//                startActivity(new Intent(this, PaymentDetailsActivity.class));
+//                break;
 
             case R.id.menu_change:
                 startActivity(new Intent(HomeActivity.this, VoteActivity.class));
