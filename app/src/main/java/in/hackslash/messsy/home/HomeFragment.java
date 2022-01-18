@@ -125,10 +125,9 @@ public class HomeFragment extends Fragment {
             case "lunch":
                 mealNextType = "dinner";
                 time += "afternoon";
-
                 break;
             case "dinner":
-                mealNextType = "lunch";
+                mealNextType = "lunch"; // should be breakfast
                 time += "evening";
                 break;
         }
@@ -178,7 +177,7 @@ public class HomeFragment extends Fragment {
         mealList.clear();
         firestore = FirebaseFirestore.getInstance();
         firestore.collection("MealListData")
-                .document("Sunday").collection(meal).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                .document(day).collection(meal).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots) {
